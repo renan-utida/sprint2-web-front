@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const HeaderCabecalho = styled.header`
-
     background-color: black;
     height: 75px;
 `   
