@@ -32,11 +32,11 @@ export const MainNoticia = styled.main`
         'noticia4'
     ;
 
-    .titulo-tecnologia {
+    .titulo-noticia {
         grid-area: titulo;
     }
 
-    .corpo-tecnologia{
+    .corpo-noticia{
         grid-area: corpo;
     }
 
@@ -65,7 +65,7 @@ export const MainNoticia = styled.main`
         grid-area: noticia4;
     }
 `
-export const SectionTituloTec = styled.section`
+export const SectionTituloNoticia = styled.section`
     display: flex;
     flex-direction: column;
     text-align: justify;
@@ -94,7 +94,7 @@ export const SectionTituloTec = styled.section`
     }
 `
 
-export const SectionCorpoTec = styled.section`
+export const SectionCorpoNoticia = styled.section`
     margin: 30px 0px;
 
     p{
@@ -115,11 +115,23 @@ export const SectionCorpoTec = styled.section`
         height: 450px;
         margin: 30px 0px 15px 0px;
     }
+
+    .img-cor1{
+        width: 100%;
+        height: 390px;
+        margin: 30px 0px;
+    }
+
+    .img-cor2{
+        width: 100%;
+        height: 470px;
+        margin: 30px 0px 15px 0px;
+    }
 `
 
 /*----------------------------------------------------------*/
 /*Estilização para as infos extras */
-export const ExtraInfo = styled.div`
+export const ExtraNoticia = styled.div`
     
     padding: 20px 0px;
 

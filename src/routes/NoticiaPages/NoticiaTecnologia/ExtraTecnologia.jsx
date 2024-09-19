@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
-import { ExtraInfo } from "./noticiatecnologia-styled"
+import { ExtraNoticia } from "../noticia-geral-styled"
 
-const ExtraContent=({ image, category, link, title, date, description})=>{
+const ExtraTecnologia=({ image, category, link, title, date, description})=>{
 
     return(
-        <ExtraInfo>
+        <ExtraNoticia>
             <div className='info-extra-container'>
                 <div className='box-extra-img'>
                     <Link to={link}>
@@ -20,8 +20,8 @@ const ExtraContent=({ image, category, link, title, date, description})=>{
                     <p>{description}</p>
                 </div>
             </div>
-        </ExtraInfo>
+        </ExtraNoticia>
     )  
 }
 
-export default ExtraContent
+export default ExtraTecnologia

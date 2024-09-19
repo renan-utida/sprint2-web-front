@@ -37,6 +37,7 @@ const Home=()=>{
                     title="A Fórmula E Expande Horizontes: Novas Cidades Confirmadas para o Calendário 2025"
                     date="Há 5 dias"
                     description="Liga elétrica anuncia adições emocionantes ao calendário, incluindo corridas na África e no Oriente Médio."
+                    link='/noticia-corrida'
                 />
             </section>
 

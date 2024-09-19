@@ -2,12 +2,13 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 /*Importando as denpendências para criar as rotas*/
-import FormulaE from './routes/Formulae/index.jsx'
-import Error from './routes/Error'
 import GlobalStyle from './global-styled.js'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './routes/Home/index.jsx'
-import NoticiaTecnologia from './routes/NoticiaTecnologia/index.jsx'
+import NoticiaTecnologia from './routes/NoticiaPages/NoticiaTecnologia/index.jsx'
+import NoticiaCorrida from './routes/NoticiaPages/NoticiaCorrida/index.jsx'
+import FormulaE from './routes/Formulae/index.jsx'
+import Error from './routes/Error'
 
 /*Criando a função createBrowserRouter*/
 const router = createBrowserRouter ([
@@ -21,7 +22,8 @@ const router = createBrowserRouter ([
     children: [
       { path: '/', element: <Home/> },
       { path: '/formulae', element: <FormulaE /> },
-      { path: '/noticia-tecnologia', element: <NoticiaTecnologia/>}
+      { path: '/noticia-tecnologia', element: <NoticiaTecnologia/>},
+      { path: '/noticia-corrida', element: <NoticiaCorrida/>},
     ]
   }
 ])
