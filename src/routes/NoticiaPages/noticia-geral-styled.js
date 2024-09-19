@@ -127,6 +127,18 @@ export const SectionCorpoNoticia = styled.section`
         height: 470px;
         margin: 30px 0px 15px 0px;
     }
+
+    .img-eve1{
+        width: 100%;
+        height: 380px;
+        margin: 30px 0px 15px 0px;
+    }
+
+    .img-eve2{
+        width: 100%;
+        height: 420px;
+        margin: 30px 0px 15px 0px;
+    }
 `
 
 /*----------------------------------------------------------*/

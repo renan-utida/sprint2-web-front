@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './routes/Home/index.jsx'
 import NoticiaTecnologia from './routes/NoticiaPages/NoticiaTecnologia/index.jsx'
 import NoticiaCorrida from './routes/NoticiaPages/NoticiaCorrida/index.jsx'
+import NoticiaEventos from './routes/NoticiaPages/NoticiaEventos/index.jsx'
 import FormulaE from './routes/Formulae/index.jsx'
 import Error from './routes/Error'
 
@@ -24,6 +25,7 @@ const router = createBrowserRouter ([
       { path: '/formulae', element: <FormulaE /> },
       { path: '/noticia-tecnologia', element: <NoticiaTecnologia/>},
       { path: '/noticia-corrida', element: <NoticiaCorrida/>},
+      { path: '/noticia-eventos', element: <NoticiaEventos/>},
     ]
   }
 ])

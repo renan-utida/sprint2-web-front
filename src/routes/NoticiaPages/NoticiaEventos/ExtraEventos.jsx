@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { ExtraNoticia } from "../noticia-geral-styled"
 
-const ExtraCorrida=({ image, category, link, title, date, description})=>{
+const ExtraEventos=({ image, category, link, title, date, description})=>{
 
     return(
         <ExtraNoticia>
@@ -24,4 +24,4 @@ const ExtraCorrida=({ image, category, link, title, date, description})=>{
     )  
 }
 
-export default ExtraCorrida
+export default ExtraEventos

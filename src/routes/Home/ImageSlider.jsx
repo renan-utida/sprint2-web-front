@@ -23,7 +23,7 @@ const ImageSlider=()=>{
     const startAutoSlide = () => {
       slideInterval = setInterval(() => {
         nextSlide();
-      }, 6000); // Troca a imagem a cada 6 segundos
+      }, 7000); // Troca a imagem a cada 7 segundos
     };
   
     // Função para o próximo slide

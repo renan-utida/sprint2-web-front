@@ -35,6 +35,7 @@ const NoticiaTecnologia=()=>{
                     title="Fãs da Fórmula E celebram Mahindra Racing em evento exclusivo na Índia"
                     date="Há 1 semana"
                     description="Evento em Mumbai reúne milhares de fãs e mostra crescimento do esporte no país."
+                    link="/noticia-eventos"
                 />
             </section>
             <section className="extra3">

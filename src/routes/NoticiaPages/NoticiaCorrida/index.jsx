@@ -25,6 +25,7 @@ const NoticiaCorrida=()=>{
                     title="Fãs da Fórmula E celebram Mahindra Racing em evento exclusivo na Índia"
                     date="Há 1 semana"
                     description="Evento em Mumbai reúne milhares de fãs e mostra crescimento do esporte no país."
+                    link="/noticia-eventos"
                 />
             </section>
             <section className="extra2">
@@ -44,6 +45,7 @@ const NoticiaCorrida=()=>{
                     date="Há 3 semanas"
                     description="Iniciativa da Mahindra Racing busca aproximar o público e tornar a Fórmula E mais inclusiva e interativa."
                 />
+            </section>
             <section className="extra4">
                 <ExtraCorrida
                     image={CarroInfo4}
@@ -53,7 +55,6 @@ const NoticiaCorrida=()=>{
                     description="Mahindra revela modelo inovador para a temporada, com foco em eficiência energética e performance."
                     link='/noticia-tecnologia'
                     />
-            </section>
             </section>
         </MainNoticia>
     )
