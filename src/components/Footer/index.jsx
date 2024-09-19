@@ -1,4 +1,4 @@
-import { FooterRodape } from "./footer-styled"
+import { FooterRodape } from "./footer-styled";
 
 
 const Footer=()=>{

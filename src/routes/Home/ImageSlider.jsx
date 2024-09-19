@@ -2,17 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { 
   SlideshowContainer, 
   Slide, 
-  NumberText, 
   PrevButton, 
   NextButton, 
   DotsContainer, 
   Dot, 
 } from './home-styled';
-import CarroNoticia1 from '../../assets/carro-formulae.jpg'
-import HorizonteNoticia2 from '../../assets/novos-horizontes.jpg'
-import EventoNoticia3 from '../../assets/evento-formulae.png'
-import EficienciaNoticia4 from '../../assets/eficiencia-formulae.jpg'
-import PesquisaNoticia5 from '../../assets/pesquisa-formulae.jpg'
+import CarroNoticia1 from '../../assets/carro-formulae.jpg';
+import HorizonteNoticia2 from '../../assets/novos-horizontes.jpg';
+import EventoNoticia3 from '../../assets/evento-formulae.png';
+import EficienciaNoticia4 from '../../assets/eficiencia-formulae.jpg';
+import PesquisaNoticia5 from '../../assets/pesquisa-formulae.jpg';
 
 const ImageSlider=()=>{
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { MenuCabecalho } from "./nav-styled"
+import { MenuCabecalho } from "./nav-styled";
+import { Link } from "react-router-dom";
 
 const MenuHamburger=()=>{
 
@@ -12,6 +13,11 @@ const MenuHamburger=()=>{
         setMenuActive(!menuActive); // Alterna entre true e false
     };
 
+    // Função para fechar o menu ao clicar em um link
+    const closeMenu = () => {
+        setMenuActive(false);
+    };
+
     return(
         <MenuCabecalho>
             <nav id="nav" className={menuActive ? "active" : ""}>
@@ -19,12 +25,12 @@ const MenuHamburger=()=>{
                     <span id="hamburger"></span>
                 </button>
                 <ul id="menu">
-                    <li><a href="#">Página Principal</a></li>
-                    <li><a href="#">Fórmula E</a></li>
-                    <li><a href="#">Corridas</a></li>
-                    <li><a href="#">Dados Pilotos</a></li>
-                    <li><a href="#">Quiz</a></li>
-                    <li><a href="#">Sobre</a></li>
+                    <li><Link to='/' onClick={closeMenu}>Página Principal</Link></li>
+                    <li><Link to='/formulae' onClick={closeMenu}>Fórmula E</Link></li>
+                    <li><a href="#" onClick={closeMenu}>Corridas</a></li>
+                    <li><a href="#" onClick={closeMenu}>Dados Pilotos</a></li>
+                    <li><a href="#" onClick={closeMenu}>Quiz</a></li>
+                    <li><a href="#" onClick={closeMenu}>Sobre</a></li>
                 </ul>
             </nav>
         </MenuCabecalho>

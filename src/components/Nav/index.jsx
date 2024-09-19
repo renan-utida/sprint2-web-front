@@ -1,6 +1,6 @@
-import { HeaderCabecalho, DivCabecalho } from "./nav-styled"
-import PesquisaIcone from "../../assets/logo-pesquisa.png"
-import MenuHamburger from "./MenuHamburger"
+import { HeaderCabecalho, DivCabecalho } from "./nav-styled";
+import PesquisaIcone from "../../assets/logo-pesquisa.png";
+import MenuHamburger from "./MenuHamburger";
 
 
 const Nav=()=>{
