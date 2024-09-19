@@ -35,6 +35,7 @@ const NoticiaCorrida=()=>{
                     title="Recorde de Eficiência: Equipes da Fórmula E Atingem 99% de Aproveitamento Energético em Nova Temporada"
                     date="Há 2 semanas"
                     description="A última geração de carros elétricos estabelece novos padrões de eficiência, transformando a Fórmula E em um laboratório para a indústria automotiva."
+                    link='/noticia-sustentabilidade'
                 />
             </section>
             <section className="extra3">
@@ -44,6 +45,7 @@ const NoticiaCorrida=()=>{
                     title="Fórmula E: Mahindra lidera pesquisa para tornar corridas mais acessíveis aos fãs"
                     date="Há 3 semanas"
                     description="Iniciativa da Mahindra Racing busca aproximar o público e tornar a Fórmula E mais inclusiva e interativa."
+                    link='/noticia-pesquisa'
                 />
             </section>
             <section className="extra4">

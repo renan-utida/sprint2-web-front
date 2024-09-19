@@ -7,10 +7,35 @@ export const MainNoticia = styled.main`
     display: grid;
     margin: 0px 250px;
     grid-template-columns: 1fr;
-    grid-auto-rows: 150px;
+    grid-auto-rows: 50px;
     grid-template-areas:
         'titulo'
         'titulo'
+        'titulo'
+        'titulo'
+        'titulo'
+        'titulo'
+        'titulo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
+        'corpo'
         'corpo'
         'corpo'
         'corpo'
@@ -22,12 +47,30 @@ export const MainNoticia = styled.main`
         'corpo'
         'corpo'
         'extra'
+        'extra'
+        'extra'
+        'noticia1'
+        'noticia1'
+        'noticia1'
+        'noticia1'
         'noticia1'
         'noticia1'
         'noticia2'
         'noticia2'
+        'noticia2'
+        'noticia2'
+        'noticia2'
+        'noticia2'
         'noticia3'
         'noticia3'
+        'noticia3'
+        'noticia3'
+        'noticia3'
+        'noticia3'
+        'noticia4'
+        'noticia4'
+        'noticia4'
+        'noticia4'
         'noticia4'
         'noticia4'
     ;
@@ -137,6 +180,30 @@ export const SectionCorpoNoticia = styled.section`
     .img-eve2{
         width: 100%;
         height: 420px;
+        margin: 30px 0px 15px 0px;
+    }
+
+    .img-sus1{
+        width: 100%;
+        height: 390px;
+        margin: 30px 0px 15px 0px;
+    }
+
+    .img-sus2{
+        width: 100%;
+        height: 430px;
+        margin: 30px 0px 15px 0px;
+    }
+
+    .img-pes1{
+        width: 100%;
+        height: 400px;
+        margin: 30px 0px 15px 0px;
+    }
+
+    .img-pes2{
+        width: 100%;
+        height: 330px;
         margin: 30px 0px 15px 0px;
     }
 `

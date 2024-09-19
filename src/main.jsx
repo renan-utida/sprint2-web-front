@@ -8,6 +8,8 @@ import Home from './routes/Home/index.jsx'
 import NoticiaTecnologia from './routes/NoticiaPages/NoticiaTecnologia/index.jsx'
 import NoticiaCorrida from './routes/NoticiaPages/NoticiaCorrida/index.jsx'
 import NoticiaEventos from './routes/NoticiaPages/NoticiaEventos/index.jsx'
+import NoticiaSustentabilidade from './routes/NoticiaPages/NoticiaSustentabilidade/index.jsx'
+import NoticiaPesquisa from './routes/NoticiaPages/NoticiaPesquisa/index.jsx'
 import FormulaE from './routes/Formulae/index.jsx'
 import Error from './routes/Error'
 
@@ -26,6 +28,8 @@ const router = createBrowserRouter ([
       { path: '/noticia-tecnologia', element: <NoticiaTecnologia/>},
       { path: '/noticia-corrida', element: <NoticiaCorrida/>},
       { path: '/noticia-eventos', element: <NoticiaEventos/>},
+      { path: '/noticia-sustentabilidade', element: <NoticiaSustentabilidade/>},
+      { path: '/noticia-pesquisa', element: <NoticiaPesquisa/>},
     ]
   }
 ])

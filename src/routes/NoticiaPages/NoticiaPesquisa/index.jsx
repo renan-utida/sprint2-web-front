@@ -1,59 +1,55 @@
-import { MainHome } from './home-styled';
+import { MainNoticia } from "../noticia-geral-styled"
 
-import ImageSlider from './ImageSlider';
-import InfoContent from './InfoContent';
+import TituloPesquisa from "./TituloPesquisa"
+import CorpoPesquisa from "./CorpoPesquisa"
+import ExtraPesquisa from "./ExtraPesquisa"
 
-import CarroInfo1 from '../../assets/carro-formulae.jpg';
-import HorizonteInfo2 from '../../assets/novos-horizontes.jpg';
-import EventoInfo3 from '../../assets/evento-formulae.png';
-import EficienciaInfo4 from '../../assets/eficiencia-formulae.jpg';
-import PesquisaInfo5 from '../../assets/pesquisa-formulae.jpg';
+import CarroInfo1 from "../../../assets/carro-formulae.jpg"
+import HorizonteInfo2 from "../../../assets/novos-horizontes.jpg"
+import EventoInfo3 from "../../../assets/evento-formulae.png"
+import EficienciaInfo4 from "../../../assets/eficiencia-formulae.jpg"
 
-const Home=()=>{
+const NoticiaPesquisa=()=>{
 
     return(
-        <MainHome>
-            <ImageSlider className='slideshow'/>
-
-            <section className="recente">
-                <h2>Últimas Notícias</h2>
+        <MainNoticia>
+            <TituloPesquisa/>
+            <CorpoPesquisa/>
+            <section className="veja-mais">
+                <h2>Veja mais!</h2>
             </section>
-
-            <section className="info1">
-                <InfoContent
+            <section className="extra1">
+                <ExtraPesquisa
                     image={CarroInfo1}
                     category="Tecnologia"
                     title="Novo carro da Mahindra impressiona com design aerodinâmico e autonomia recorde"
                     date="Há 2 dias"
                     description="Mahindra revela modelo inovador para a temporada, com foco em eficiência energética e performance."
                     link='/noticia-tecnologia'
-                />
+                    />
             </section>
-            
-            <section className="info2">
-                <InfoContent
+            <section className="extra2">
+                <ExtraPesquisa
                     image={HorizonteInfo2}
                     category="Corrida"
                     title="A Fórmula E Expande Horizontes: Novas Cidades Confirmadas para o Calendário 2025"
                     date="Há 5 dias"
                     description="Liga elétrica anuncia adições emocionantes ao calendário, incluindo corridas na África e no Oriente Médio."
-                    link='/noticia-corrida'
-                />
+                    link="/noticia-corrida"
+                    />
             </section>
-
-            <section className="info3">
-                <InfoContent
+            <section className="extra3">
+                <ExtraPesquisa
                     image={EventoInfo3}
                     category="Eventos"
                     title="Fãs da Fórmula E celebram Mahindra Racing em evento exclusivo na Índia"
                     date="Há 1 semana"
                     description="Evento em Mumbai reúne milhares de fãs e mostra crescimento do esporte no país."
-                    link='/noticia-eventos'
+                    link="/noticia-eventos"
                 />
             </section>
-
-            <section className="info4">
-                <InfoContent
+            <section className="extra4">
+                <ExtraPesquisa
                     image={EficienciaInfo4}
                     category="Sustentabilidade"
                     title="Recorde de Eficiência: Equipes da Fórmula E Atingem 99% de Aproveitamento Energético em Nova Temporada"
@@ -62,21 +58,8 @@ const Home=()=>{
                     link='/noticia-sustentabilidade'
                 />
             </section>
-
-            <section className="info5">
-                <InfoContent
-                    image={PesquisaInfo5}
-                    category="Pesquisa"
-                    title="Fórmula E: Mahindra lidera pesquisa para tornar corridas mais acessíveis aos fãs"
-                    date="Há 3 semanas"
-                    description="Iniciativa da Mahindra Racing busca aproximar o público e tornar a Fórmula E mais inclusiva e interativa."
-                    link='/noticia-pesquisa'
-                />
-            </section>
-            
-            <section className="info-extra"></section>
-        </MainHome>
+        </MainNoticia>
     )
 }
 
-export default Home
+export default NoticiaPesquisa
