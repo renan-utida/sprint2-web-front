@@ -26,10 +26,10 @@ const MenuHamburger=()=>{
                 </button>
                 <ul id="menu">
                     <li><Link to='/' onClick={closeMenu}>Página Principal</Link></li>
-                    <li><Link to='/formulae' onClick={closeMenu}>Fórmula E</Link></li>
+                    <li><Link to='/formulae-info' onClick={closeMenu}>Fórmula E</Link></li>
                     <li><a href="#" onClick={closeMenu}>Corridas</a></li>
                     <li><a href="#" onClick={closeMenu}>Dados Pilotos</a></li>
-                    <li><a href="#" onClick={closeMenu}>Quiz</a></li>
+                    <li><Link to="/quiz" onClick={closeMenu}>Quiz</Link></li>
                     <li><a href="#" onClick={closeMenu}>Sobre</a></li>
                 </ul>
             </nav>

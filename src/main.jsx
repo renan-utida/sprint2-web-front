@@ -5,12 +5,13 @@ import App from './App.jsx'
 import GlobalStyle from './global-styled.js'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './routes/Home/index.jsx'
+import FormulaE from './routes/Formulae/index.jsx'
 import NoticiaTecnologia from './routes/NoticiaPages/NoticiaTecnologia/index.jsx'
 import NoticiaCorrida from './routes/NoticiaPages/NoticiaCorrida/index.jsx'
 import NoticiaEventos from './routes/NoticiaPages/NoticiaEventos/index.jsx'
 import NoticiaSustentabilidade from './routes/NoticiaPages/NoticiaSustentabilidade/index.jsx'
 import NoticiaPesquisa from './routes/NoticiaPages/NoticiaPesquisa/index.jsx'
-import FormulaE from './routes/Formulae/index.jsx'
+import Quiz from './routes/Quiz/index.jsx'
 import Error from './routes/Error'
 
 /*Criando a função createBrowserRouter*/
@@ -24,12 +25,13 @@ const router = createBrowserRouter ([
     // Criando as rotas filhas
     children: [
       { path: '/', element: <Home/> },
-      { path: '/formulae', element: <FormulaE /> },
+      { path: '/formulae-info', element: <FormulaE/>},
       { path: '/noticia-tecnologia', element: <NoticiaTecnologia/>},
       { path: '/noticia-corrida', element: <NoticiaCorrida/>},
       { path: '/noticia-eventos', element: <NoticiaEventos/>},
       { path: '/noticia-sustentabilidade', element: <NoticiaSustentabilidade/>},
       { path: '/noticia-pesquisa', element: <NoticiaPesquisa/>},
+      { path: '/quiz', element: <Quiz/>},
     ]
   }
 ])

@@ -1,11 +1,8 @@
 
-
 const FormulaE=()=>{
 
     return(
-        <>
-            <h1>Sobre a Fórmula E</h1>
-        </>
+        <h1>Sobre a Fórmula E</h1>
     )
 }
 
