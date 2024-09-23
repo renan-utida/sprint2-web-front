@@ -6,6 +6,7 @@ export const MainNoticia = styled.main`
 
     display: grid;
     margin: 0px 250px;
+    padding-top: 75px;
     grid-template-columns: 1fr;
     grid-auto-rows: 50px;
     grid-template-areas:

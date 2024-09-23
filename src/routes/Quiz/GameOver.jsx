@@ -11,7 +11,7 @@ const GameOver=()=>{
         <DivOver id="gameover">
             <h2>Fim de Jogo!</h2>
             <p>Pontuação: {quizState.score}</p>
-            <p>Você acertou {quizState.score} de {quizState.questions.length}{""} perguntas.</p>
+            <p>Você acertou {quizState.correctAnswers} de {quizState.questions.length}{""} perguntas.</p>
             <button onClick={()=> dispatch({type: "NEW_GAME"})}>Reiniciar</button>
         </DivOver>
     )

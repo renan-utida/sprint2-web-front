@@ -11,13 +11,11 @@ const Quiz=()=>{
     const [quizState, dispatch] = useContext(QuizContext);
 
     useEffect(() => {
-        // embaralhar as perguntas
-        dispatch({ type: "REORDER_QUESTIONS" });
-    }, [])
+    }, [quizState.gameStage]); // Agora observa o estágio do jogo
 
     return (
         <MainQuiz className="quiz">
-            <h1>IM Quiz</h1>
+            <h1>Formula E Quiz</h1>
             {quizState.gameStage === "Start" && <Welcome/>}    {/*Acessando o Welcome*/}
             {quizState.gameStage === "Playing" && <Question/>}    {/*Acessando o Question*/}
             {quizState.gameStage === "End" && <GameOver/>}  {/*Acessando o Fim do Jogo*/}

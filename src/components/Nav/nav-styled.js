@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const HeaderCabecalho = styled.header`
     background-color: black;
     height: 75px;
+    position: fixed;
+    top: 0;         /* Posiciona no topo */
+    width: 100%;    /* Garante que ocupe a largura total */
+    z-index: 999;   /* Garante que o header fique acima dos outros elementos */
 `   
 export const DivCabecalho = styled.div`
     color: white;

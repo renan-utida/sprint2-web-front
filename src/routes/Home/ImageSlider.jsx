@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   SlideshowContainer, 
   Slide, 
@@ -7,6 +8,7 @@ import {
   DotsContainer, 
   Dot, 
 } from './home-styled';
+// Import das imagens do SlideshowContainer
 import CarroNoticia1 from '../../assets/carro-formulae.jpg';
 import HorizonteNoticia2 from '../../assets/novos-horizontes.jpg';
 import EventoNoticia3 from '../../assets/evento-formulae.png';
@@ -51,27 +53,32 @@ const ImageSlider=()=>{
       {
         image: CarroNoticia1,
         title: 'Novo carro da Mahindra impressiona com design aerodinâmico e autonomia recorde',
-        subtitle: 'Mahindra revela modelo inovador para a temporada, com foco em eficiência energética e performance.'
+        subtitle: 'Mahindra revela modelo inovador para a temporada, com foco em eficiência energética e performance.',
+        link: '/noticia-tecnologia',
       },
       {
         image: HorizonteNoticia2,
         title: 'A Fórmula E Expande Horizontes: Novas Cidades Confirmadas para o Calendário 2025',
-        subtitle: 'Liga elétrica anuncia adições emocionantes ao calendário, incluindo corridas na África e no Oriente Médio.'
+        subtitle: 'Liga elétrica anuncia adições emocionantes ao calendário, incluindo corridas na África e no Oriente Médio.',
+        link: '/noticia-corrida',
       },
       {
         image: EventoNoticia3,
         title: 'Fãs da Fórmula E celebram Mahindra Racing em evento exclusivo na Índia',
-        subtitle: 'Evento em Mumbai reúne milhares de fãs e mostra crescimento do esporte no país.'
+        subtitle: 'Evento em Mumbai reúne milhares de fãs e mostra crescimento do esporte no país.',
+        link: '/noticia-eventos',
       },
       {
         image: EficienciaNoticia4,
         title: 'Recorde de Eficiência: Equipes da Fórmula E Atingem 99% de Aproveitamento Energético em Nova Temporada',
-        subtitle: 'A última geração de carros elétricos estabelece novos padrões de eficiência, transformando a Fórmula E em um laboratório para a indústria automotiva.'
+        subtitle: 'A última geração de carros elétricos estabelece novos padrões de eficiência, transformando a Fórmula E em um laboratório para a indústria automotiva.',
+        link: '/noticia-sustentabilidade',
       },
       {
         image: PesquisaNoticia5,
         title: 'Fórmula E: Mahindra lidera pesquisa para tornar corridas mais acessíveis aos fãs',
-        subtitle: 'Iniciativa da Mahindra Racing busca aproximar o público e tornar a Fórmula E mais inclusiva e interativa.'
+        subtitle: 'Iniciativa da Mahindra Racing busca aproximar o público e tornar a Fórmula E mais inclusiva e interativa.',
+        link: '/noticia-pesquisa',
       }
     ];
 
@@ -79,16 +86,18 @@ const ImageSlider=()=>{
         <SlideshowContainer className='slideshow'>
             {slides.map((slide, index) => ( // Para cada slide da lista "slides", renderiza um componente de Slide com os dados da imagem, título e subtítulo.
                 <Slide key={index} style={{ display: slideIndex === index + 1 ? 'block' : 'none' }}>
-                    {/* Renderiza a imagem do slide */}
-                    <img src={slide.image} alt={`Slide ${index + 1}`} />
-                    {/* Aplica um gradiente sobre a imagem para dar contraste */}
-                    <div className='gradient-overlay'></div>
-                    {/* Exibe o título do slide */}
-                    <h1>{slide.title}</h1>
-                    {/* Exibe o subtítulo do slide */}
-                    <p>{slide.subtitle}</p>
-                    {/* Mostra a numeração do slide, exemplo: "1 / 5" */}
-                    <div className='numeracao-slide'>{`${index + 1} / ${totalSlides}`}</div>
+                    <Link to={slide.link}>
+                        {/* Renderiza a imagem do slide em um link */}
+                        <img src={slide.image} alt={`Slide ${index + 1}`} />
+                        {/* Aplica um gradiente sobre a imagem para dar contraste */}
+                        <div className='gradient-overlay'></div>
+                        {/* Exibe o título do slide */}
+                        <h1>{slide.title}</h1>
+                        {/* Exibe o subtítulo do slide */}
+                        <p>{slide.subtitle}</p>
+                        {/* Mostra a numeração do slide, exemplo: "1 / 5" */}
+                        <div className='numeracao-slide'>{`${index + 1} / ${totalSlides}`}</div>
+                    </Link>
                 </Slide>
             ))}
 

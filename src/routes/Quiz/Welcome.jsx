@@ -1,12 +1,26 @@
-import { useContext } from 'react'
-import { QuizContext } from '../../context/quiz'
+import { useContext, useEffect, useRef } from 'react';
+import { QuizContext } from '../../context/quiz';
 
-import Quiz from '../../assets/quiz.png'
+import Quiz from '../../assets/quiz.png';
+import raceAudio from '../../audio/corrida.mp3';
 
-import { WelcomeSection } from "./quiz-styled"
+import { WelcomeSection } from "./quiz-styled";
 
 const Welcome=()=> {
     const [quizState, dispatch] = useContext(QuizContext);
+    const audioRef = useRef(null); // Referência para o áudio
+
+    useEffect(() => {
+        if (quizState.gameStage === "Start") {
+            audioRef.current.volume = 0.2; // Define o volume para 20%
+            audioRef.current.play(); // Reproduz o áudio quando a página é acessada
+        }
+    }, [quizState.gameStage]);
+
+    const handleImageClick = () => {
+        audioRef.current.volume = 0.4; // Define o volume para 40% ao clicar na imagem
+        audioRef.current.play(); // Reproduz o áudio quando a imagem é clicada
+    };
 
     return(
         <WelcomeSection id="welcome">
@@ -16,7 +30,8 @@ const Welcome=()=> {
             <button onClick={()=> dispatch({type: "CHANGE_STATE"})}>
                 Iniciar
             </button>
-            <img src={Quiz} alt="Inicio do Quiz" />
+            <img src={Quiz} alt="Inicio do Quiz" onClick={handleImageClick} />
+            <audio ref={audioRef} src={raceAudio} />
         </WelcomeSection>
     )
 }

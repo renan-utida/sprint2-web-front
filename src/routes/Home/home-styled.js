@@ -5,6 +5,7 @@ import styled from "styled-components";
 export const MainHome = styled.main`
 
     display: grid;
+    padding-top: 75px;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 150px;
     grid-template-areas:
@@ -79,10 +80,15 @@ export const Slide = styled.div`
     display: none;
     text-align: justify;
 
-    img {
+    a img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: transform 1.7s ease; /* Transição suave do zoom */
+    }        
+
+    a:hover img{
+        transform: scale(1.09); /* Aplica o leve zoom na imagem */
     }
 
     .gradient-overlay{
