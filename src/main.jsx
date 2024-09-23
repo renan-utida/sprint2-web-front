@@ -12,6 +12,7 @@ import NoticiaEventos from './routes/NoticiaPages/NoticiaEventos/index.jsx'
 import NoticiaSustentabilidade from './routes/NoticiaPages/NoticiaSustentabilidade/index.jsx'
 import NoticiaPesquisa from './routes/NoticiaPages/NoticiaPesquisa/index.jsx'
 import Quiz from './routes/Quiz/index.jsx'
+import Login from './routes/Login/index.jsx'
 import Error from './routes/Error'
 
 /*Criando a função createBrowserRouter*/
@@ -32,6 +33,7 @@ const router = createBrowserRouter ([
       { path: '/noticia-sustentabilidade', element: <NoticiaSustentabilidade/>},
       { path: '/noticia-pesquisa', element: <NoticiaPesquisa/>},
       { path: '/quiz', element: <Quiz/>},
+      { path: '/login', element: <Login/>},
     ]
   }
 ])

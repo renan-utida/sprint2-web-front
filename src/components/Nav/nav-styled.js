@@ -35,25 +35,22 @@ export const DivCabecalho = styled.div`
         list-style: none;
     }
 
-    .login{
-        transition: background-color 0.3s ease;
-        background-color: #DD0606;
+    .login-btn{
+        display: block;
         padding: 7px 12px;
         margin-left: 15px;
         border: 1px solid white;
         border-radius: 12px;
-        cursor: pointer;
-    }
-    
-    .login:hover{
-        background-color: #a80606;
-    }
-    
-    .login span{
-        display: block;
+        background-color: #DD0606;
         color: white;
         font-size: 1.3em;
         font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    
+    .login-btn:hover{
+        background-color: #a80606;
     }
 `
 

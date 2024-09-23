@@ -14,9 +14,7 @@ const Nav=()=>{
                     <img src={PesquisaIcone} alt="Icone de Pesquisa" />
                 </div>
                 <Link href="/" className="logo">Logo</Link>
-                <button href="#" className="login">
-                    <span>Entrar</span>
-                </button>
+                <Link to='/login' className="login-btn">Entrar</Link>
             </DivCabecalho>
         </HeaderCabecalho>
     )
