@@ -26,11 +26,14 @@ const MenuHamburger=()=>{
                 </button>
                 <ul id="menu">
                     <li><Link to='/' onClick={closeMenu}>Página Principal</Link></li>
-                    <li><Link to='/formulae-info' onClick={closeMenu}>Fórmula E</Link></li>
-                    <li><a href="#" onClick={closeMenu}>Corridas</a></li>
-                    <li><a href="#" onClick={closeMenu}>Dados Pilotos</a></li>
-                    <li><Link to="/quiz" onClick={closeMenu}>Quiz</Link></li>
+                    <li><Link to='/formulae' onClick={closeMenu}>Fórmula E</Link></li>
+                    <li><a href="#" onClick={closeMenu}>Próximas Corridas</a></li>
+                    <li><a href="#" onClick={closeMenu}>Classificação</a></li>
+                    <li><a href="#" onClick={closeMenu}>Pilotos</a></li>
+                    <li><a href="#" onClick={closeMenu}>Equipes</a></li>
                     <li><a href="#" onClick={closeMenu}>Sobre</a></li>
+                    <li><Link to="/login" onClick={closeMenu}>Quiz</Link></li>
+                    <li><Link to="/login" onClick={closeMenu}>Login</Link></li>
                 </ul>
             </nav>
         </MenuCabecalho>

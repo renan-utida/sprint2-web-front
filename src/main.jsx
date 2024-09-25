@@ -5,7 +5,7 @@ import App from './App.jsx'
 import GlobalStyle from './global-styled.js'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './routes/Home/index.jsx'
-import FormulaE from './routes/Formulae/index.jsx'
+import FormulaE from './routes/FormulaPage/index.jsx'
 import NoticiaTecnologia from './routes/NoticiaPages/NoticiaTecnologia/index.jsx'
 import NoticiaCorrida from './routes/NoticiaPages/NoticiaCorrida/index.jsx'
 import NoticiaEventos from './routes/NoticiaPages/NoticiaEventos/index.jsx'
@@ -26,7 +26,7 @@ const router = createBrowserRouter ([
     // Criando as rotas filhas
     children: [
       { path: '/', element: <Home/> },
-      { path: '/formulae-info', element: <FormulaE/>},
+      { path: '/formulae', element: <FormulaE/>},
       { path: '/noticia-tecnologia', element: <NoticiaTecnologia/>},
       { path: '/noticia-corrida', element: <NoticiaCorrida/>},
       { path: '/noticia-eventos', element: <NoticiaEventos/>},

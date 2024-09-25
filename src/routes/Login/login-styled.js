@@ -10,7 +10,6 @@ export const MainLogin = styled.main`
     align-items: flex-start;
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(${LoginBackground}) no-repeat center / cover;
- 
 `
 
 export const SectionLogin = styled.section`
@@ -96,6 +95,12 @@ export const SectionLogin = styled.section`
         font-size: 16px;
         font-weight: 600;
         text-shadow: none;
+        transition: background-color 1s ease;
+    }
+    
+    button:hover{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid black;
     }
 
     .signup-link{
