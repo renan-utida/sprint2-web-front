@@ -25,11 +25,11 @@ const MenuHamburger=()=>{
                     <span id="hamburger"></span>
                 </button>
                 <ul id="menu">
-                    <li><Link to='/' onClick={closeMenu}>Página Principal</Link></li>
-                    <li><Link to='/formulae' onClick={closeMenu}>Fórmula E</Link></li>
-                    <li><a href="#" onClick={closeMenu}>Próximas Corridas</a></li>
+                    <li><Link to="/" onClick={closeMenu}>Página Principal</Link></li>
+                    <li><Link to="/formulae" onClick={closeMenu}>Fórmula E</Link></li>
+                    <li><Link to="/proximas-corridas" onClick={closeMenu}>Próximas Corridas</Link></li>
                     <li><a href="#" onClick={closeMenu}>Classificação</a></li>
-                    <li><a href="#" onClick={closeMenu}>Pilotos</a></li>
+                    <li><Link to="/piloto-page" onClick={closeMenu}>Pilotos</Link></li>
                     <li><a href="#" onClick={closeMenu}>Equipes</a></li>
                     <li><a href="#" onClick={closeMenu}>Sobre</a></li>
                     <li><Link to="/login" onClick={closeMenu}>Quiz</Link></li>
