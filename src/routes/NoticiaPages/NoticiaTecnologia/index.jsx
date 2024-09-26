@@ -44,7 +44,7 @@ const NoticiaTecnologia=()=>{
                     category="Sustentabilidade"
                     title="Recorde de Eficiência: Equipes da Fórmula E Atingem 99% de Aproveitamento Energético em Nova Temporada"
                     date="Há 2 semanas"
-                    description="A última geração de carros elétricos estabelece novos padrões de eficiência, transformando a Fórmula E em um laboratório para a indústria automotiva."
+                    description="A última geração de carros elétricos estabelece novos padrões de eficiência, transformando a Fórmula E em um laboratório na indústria automotiva."
                     link='/noticia-sustentabilidade'
                 />
             </section>

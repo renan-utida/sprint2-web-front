@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import HeaderBackground from "../../assets/header-background.png";
 
 export const HeaderCabecalho = styled.header`
     background-color: black;
@@ -7,6 +8,10 @@ export const HeaderCabecalho = styled.header`
     top: 0;         /* Posiciona no topo */
     width: 100%;    /* Garante que ocupe a largura total */
     z-index: 999;   /* Garante que o header fique acima dos outros elementos */
+    background-image: url(${HeaderBackground});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 `   
 export const DivCabecalho = styled.div`
     color: white;
@@ -28,11 +33,13 @@ export const DivCabecalho = styled.div`
     }
     
     .logo{
-        font-size: 48px;
-        font-weight: bold;
-        color: #DD0606;
-        text-decoration: none;
-        list-style: none;
+        height: 55px;
+        max-width: 300px;
+    }
+
+    .logo img{
+        height: 100%;
+        width: 100%;
     }
 
     .login-btn{
@@ -41,22 +48,22 @@ export const DivCabecalho = styled.div`
         margin-left: 15px;
         border: 1px solid white;
         border-radius: 12px;
-        background-color: #DD0606;
+        background-color: transparent;
         color: white;
-        font-size: 1.3em;
+        font-size: 1.2em;
         font-weight: bold;
         text-decoration: none;
-        transition: background-color 0.3s ease;
+        transition: 1.0s ease;
     }
     
     .login-btn:hover{
-        background-color: #a80606;
+        color: #0404fb;
+        border: 1px solid #0404fb;
     }
 `
 
 export const MenuCabecalho = styled.div`
     display: flex;
-    font-family: "PT Serif", serif;
     font-weight: 700;
     font-size: 18px;
     align-items: center;
@@ -65,9 +72,6 @@ export const MenuCabecalho = styled.div`
         display: flex;
         padding: 0 1rem;
         margin-bottom: 0.3rem;
-        font-family: "PT Serif", serif;
-        font-weight: 700;
-        font-size: 22px;
         border: none;
         background: none;
         color: white;
@@ -107,7 +111,7 @@ export const MenuCabecalho = styled.div`
     #menu{
         display: block;
         position: absolute;
-        width: 350px;
+        width: 330px;
         top: 75px;
         left: 0px;
         list-style: none;
@@ -128,7 +132,7 @@ export const MenuCabecalho = styled.div`
     #menu li a{
         display: block;
         padding: 1.4rem 1rem;
-        margin: 0 0.3rem;
+        margin: 0.2rem 0.3rem;
         color: white;
         text-decoration: none;
         border-top: 2px solid rgba(136, 136, 136, 0.12);

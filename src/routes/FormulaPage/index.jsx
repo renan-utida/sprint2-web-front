@@ -1,7 +1,7 @@
 import { MainFormulaE } from "./formulae-styled"
 import AccordionInfo from "./AccordionInfo"
 import VideoBg from "../../video/video-formulae.mp4"
-import LogoFormulaE from "../../assets/logo-formulae.svg.png"
+import ABBFormulaE from "../../assets/abb-formulae-logo.png"
 
 const FormulaE = () => {
 
@@ -9,7 +9,7 @@ const FormulaE = () => {
         <MainFormulaE>
             <video src={VideoBg} autoPlay loop muted/>
             <a href="https://www.fiaformulae.com/pt-br" target="_blank">
-                <img src={LogoFormulaE} alt="Logo da Formula E" />
+                <img src={ABBFormulaE} alt="Logo da ABB Formula E" />
             </a>
             <AccordionInfo />
         </MainFormulaE>

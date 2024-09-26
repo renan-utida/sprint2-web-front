@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const MainFormulaE = styled.main`
     width: 100%;
     margin-top: 60px;
+    background-color: #0e233c;
 
     video {
         width: 100%;
@@ -21,12 +22,12 @@ export const MainFormulaE = styled.main`
 
 export const SectionFormula = styled.section`
     background-color: #fff;
-    margin: 50px 20px;
+    margin: 50px 40px;
     
     div{
         display: flex;
         flex-direction: column;
-        max-width: 1200px;
+        max-width: 1480px;
         margin: 0 auto;
 
     }

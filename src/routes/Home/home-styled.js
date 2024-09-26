@@ -33,7 +33,7 @@ export const MainHome = styled.main`
         align-items: flex-end;
         
         h2{
-            color: #DD0606;
+            color: #04049a;
             font-size: 2.7em;
             margin: 20px 35px;
         }
@@ -218,7 +218,7 @@ export const InfoWrapper = styled.div`
     .box-info span{
         font-size: 1.3em;
         font-weight: bold;
-        color: darkred;
+        color: #5800C3;
     }
 
     .box-info a{
@@ -228,13 +228,13 @@ export const InfoWrapper = styled.div`
 
     .box-info a h3{
         font-size: 1.5em;
-        color: red;
+        color: #0404fb;
         transition: color 1s ease;
         margin: 10px 0px;
     }
 
     .box-info a h3:hover{
-        color: darkred;
+        color: #04049a;
     }
 
     .box-info p{
