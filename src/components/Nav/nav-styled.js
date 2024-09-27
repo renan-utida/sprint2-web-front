@@ -2,7 +2,6 @@ import styled from "styled-components";
 import HeaderBackground from "../../assets/header-background.png";
 
 export const HeaderCabecalho = styled.header`
-    background-color: black;
     height: 75px;
     position: fixed;
     top: 0;         /* Posiciona no topo */
@@ -19,13 +18,13 @@ export const DivCabecalho = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
-
+    
     .hamburger-search{
         display: flex;
         flex-direction: row;
         gap: 0.8rem;
     }
-
+    
     .hamburger-search img{
         width: 30px;
         height: 30px;
@@ -36,31 +35,139 @@ export const DivCabecalho = styled.div`
         height: 55px;
         max-width: 300px;
     }
-
+    
     .logo img{
         height: 100%;
         width: 100%;
     }
-
+    
     .login-btn{
         display: block;
-        padding: 7px 12px;
+        padding: 9px 12px;
         margin-left: 15px;
         border: 1px solid white;
         border-radius: 12px;
         background-color: transparent;
         color: white;
-        font-size: 1.2em;
+        font-size: 1.2rem;
         font-weight: bold;
         text-decoration: none;
-        transition: 1.0s ease;
+        transition: 0.8s ease;
     }
     
     .login-btn:hover{
         color: #0404fb;
         border: 1px solid #0404fb;
     }
-`
+    
+    @media screen and (max-width: 1000px){
+        padding: 13px 24px;
+        
+        .hamburger-search{
+            gap: 0.7rem;
+        }
+        
+        .hamburger-search img{
+            width: 29px;
+            height: 29px;
+        }
+        
+        .logo{
+            height: 50px;
+            max-width: 195px;
+        }
+        
+        .login-btn{
+            padding: 8px 12px;
+            margin-left: 10px;
+            font-size: 1.1rem;
+        }
+    }
+    
+    @media screen and (max-width: 700px){
+        padding: 15px 16px;
+        
+        .hamburger-search{
+            gap: 0.6rem;
+        }
+        
+        .hamburger-search img{
+            width: 28px;
+            height: 28px;
+        }
+        
+        .logo{
+            height: 45px;
+            max-width: 183px;
+        }
+        
+        .login-btn{
+            margin-left: 8px;
+            font-size: 1.0rem;
+        }
+    }
+    
+    @media screen and (max-width: 520px){
+        padding: 18px 12px;
+        
+        .hamburger-search{
+            gap: 0.55rem;
+        }
+        
+        .logo{
+            height: 40px;
+            max-width: 165px;
+        }
+        
+        .login-btn{
+            margin-left: 6px;
+            font-size: 0.9rem;
+        }
+    }
+    
+    @media screen and (max-width: 520px){
+        padding: 20px 10px 20px 8px;
+        
+        .hamburger-search{
+            gap: 0.5rem;
+        }
+        
+        .logo{
+            height: 36px;
+            max-width: 155px;
+        }
+        
+        .login-btn{
+            margin-left: 3px;
+            font-size: 0.85rem;
+            padding: 8px 9px;
+        }
+    }
+    
+    @media screen and (max-width: 375px){
+        padding: 19px 9px 19px 5px;
+        
+        .hamburger-search{
+            gap: 0.1rem;
+        }
+        
+        .logo{
+            height: 36px;
+            max-width: 130px;
+        }
+        
+        .login-btn{
+            margin-left: 0px;
+            font-size: 0.80rem;
+            padding: 8px 8px;
+        }
+        
+        .login-btn:hover{
+            color: #9886E7;
+            border: 1px solid #9886E7;
+        }
+    }
+    `
 
 export const MenuCabecalho = styled.div`
     display: flex;

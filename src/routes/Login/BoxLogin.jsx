@@ -102,7 +102,7 @@ const BoxLogin = () => {
 
                 <div className="signup-link">
                     <p>Não possui uma conta?</p>
-                    <a href="#">Registrar</a>
+                    <a href="#">Criar</a>
                 </div>
             </form>
 
