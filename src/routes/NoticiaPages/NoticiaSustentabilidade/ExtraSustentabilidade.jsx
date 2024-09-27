@@ -6,11 +6,9 @@ const ExtraSustentabilidade=({ image, category, link, title, date, description})
     return(
         <ExtraNoticia>
             <div className='info-extra-container'>
-                <div className='box-extra-img'>
-                    <Link to={link}>
-                        <img src={image} alt={title} />
-                    </Link>
-                </div>
+                <Link to={link} className="img-link">
+                    <img src={image} alt={title} />
+                </Link>
                 <div className='box-extra-info'>
                     <span>{category}</span>
                     <Link to={link}>
