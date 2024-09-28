@@ -79,9 +79,9 @@ export const MainQuiz = styled.main`
         }
     }
     
-    @media screen and (max-width: 590px){    
-        margin-top: -25px;
-        
+    @media screen and (max-width: 590px){ 
+        margin-top: -8px;
+
         h1{
             font-size: 2.1rem;
         }
@@ -92,9 +92,7 @@ export const MainQuiz = styled.main`
         }
     }
     
-    @media screen and (max-width: 430px){
-        margin-top: -50px;
-        
+    @media screen and (max-width: 430px){        
         h1{
             font-size: 1.85rem;
         }
@@ -184,7 +182,7 @@ export const WelcomeSection = styled.section`
         }
     }
     @media screen and (max-width: 430px){
-        max-width: 225px;
+        max-width: 240px;
         
         h2{ font-size: .95rem; }
         
@@ -214,10 +212,12 @@ export const DivQuestion = styled.div`
 
     p{
         margin: .2rem;
+        font-size: 1.2rem;
     }
     
     .contagem-perguntas{
         margin-bottom: 1.2rem;
+        font-size: 1rem;
         font-style: italic;
         font-family: "Nunito", sans-serif;
     }
@@ -225,33 +225,218 @@ export const DivQuestion = styled.div`
     button{
         border: 1px solid #fff;
         margin: 0.7rem 0 0.4rem 0;
+        font-size: 1.4rem;
     }
-    `
+
+    @media screen and (max-width: 1000px){
+        max-width: 570px;
+        padding: 1rem 2rem 0.9rem 2rem;
+
+        h2{
+            margin-bottom: 1.35rem;
+            font-size: 1.3rem;
+        }
+        
+        p{
+            margin: 0.18rem;
+            font-size: 1.1rem;
+        }
+
+        .contagem-perguntas{
+            margin-bottom: 1.1rem;
+            font-size: 0.95rem;
+        }
+
+        button{
+            margin: 0.6rem 0 0.35rem 0;
+            font-size: 1.25rem;
+        }
+    }
+    
+    @media screen and (max-width: 750px){   
+        max-width: 460px; 
+        padding: 0.9rem 1.7rem 0.85rem 1.7rem;
+
+        h2{
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+        }
+        
+        p{
+            margin: 0.15rem;
+            font-size: 1.05rem;
+        }
+
+        .contagem-perguntas{
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        button{
+            margin: 0.5rem 0 0.35rem 0;
+            font-size: 1.2rem;
+        }
+    }
+    
+    @media screen and (max-width: 590px){    
+        max-width: 360px;
+        padding: 0.8rem 1.5rem 0.75rem 1.5rem;
+
+        h2{
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        p{
+            margin: 0rem;
+            font-size: 0.9rem;
+        }
+
+        .contagem-perguntas{
+            margin-bottom: 0.9rem;
+            font-size: 0.85rem;
+        }
+
+        button{
+            margin: 0.35rem 0 0.4rem 0;
+            font-size: 1.1rem;
+        }
+    }
+    
+    @media screen and (max-width: 430px){
+        max-width: 250px;
+        padding: 0.6rem 0.8rem;
+
+        h2{
+            margin-bottom: 0.8rem;
+            font-size: 0.82rem;
+        }
+        
+        p{
+            font-size: 0.65rem;
+        }
+
+        .contagem-perguntas{
+            margin-bottom: 0.5rem;
+            font-size: 0.6rem;
+        }
+
+        button{
+            margin: 0.1rem 0 0.2rem 0;
+            font-size: 0.9rem;
+        }
+    }
+`
 
 export const DivOver = styled.div`
     text-align: center;
-    max-width: 500px;
+    max-width: 640px;
     background-color: #04044c;
     border-radius: 1rem;
     border: 2px solid #0000ff;
-    padding: 2rem 2rem 1rem 2rem;
+    padding: 2rem 4rem;
     display: flex;
     flex-direction: column;
     
     h2{
         margin-bottom: 1rem;
+        font-size: 2.5rem;
         font-style: italic;
-        font-family: "Nunito", sans-serif;
     }
 
     p{
         color: white;
-        margin: 1.2rem 0 1rem 0;
+        font-size: 1.2rem;
+        margin: 0.8rem 0 1rem 0 ;
     }
     
     button{
-        margin-top: 1.5rem;
+        margin-top: 1rem;
+        font-size: 1.6rem;
+        font-family: "Nunito", sans-serif;
+        font-style: italic;
+        border: 1px solid #0000ff;
     }
+
+    @media screen and (max-width: 1000px){
+        max-width: 570px;
+        padding: 1.8rem 3.8rem;
+
+        h2{
+            margin-bottom: 1rem;
+            font-size: 2.3rem;
+        }
+        
+        p{
+            font-size: 1.1rem;
+            margin: 0.8rem 0 1rem 0 ;
+        }
+
+        button{
+            margin-top: 0.85rem;
+            font-size: 1.45rem;
+        }
+    }
+    
+    @media screen and (max-width: 750px){   
+        max-width: 460px; 
+        padding: 1.65rem 3.6rem;
+
+        h2{
+            margin-bottom: 0.75rem;
+            font-size: 2.15rem;
+        }
+        
+        p{
+            font-size: 1.0rem;
+            margin: 0.7rem 0 .85rem 0 ;
+        }
+
+        button{
+            margin-top: 0.8rem;
+            font-size: 1.4rem;
+        }
+    }
+    
+    @media screen and (max-width: 590px){    
+        max-width: 360px;
+        padding: 1.5rem 3.4rem;
+
+        h2{
+            margin-bottom: 0.65rem;
+            font-size: 2.05rem;
+        }
+        
+        p{
+            font-size: 0.95rem;
+            margin: 0.65rem 0 .8rem 0 ;
+        }
+
+        button{
+            margin-top: 0.7rem;
+            font-size: 1.3rem;
+        }
+    }
+    
+    @media screen and (max-width: 430px){
+        max-width: 250px;
+        padding: 1.5rem 1.4rem;
+
+        h2{
+            margin-bottom: 0.6rem;
+            font-size: 1.75rem;
+        }
+        
+        p{
+            font-size: 0.8rem;
+            margin: 0.6rem 0 0.75rem 0 ;
+        }
+
+        button{
+            margin-top: 0.65rem;
+            font-size: 1.1rem;
+        }
+    } 
 `
 
 export const DivOption = styled.div`
