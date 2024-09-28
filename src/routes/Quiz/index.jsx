@@ -15,7 +15,7 @@ const Quiz=()=>{
 
     return (
         <MainQuiz className="quiz">
-            <h1>Formula E Quiz</h1>
+            <h1>Fórmula E Quiz</h1>
             {quizState.gameStage === "Start" && <Welcome/>}    {/*Acessando o Welcome*/}
             {quizState.gameStage === "Playing" && <Question/>}    {/*Acessando o Question*/}
             {quizState.gameStage === "End" && <GameOver/>}  {/*Acessando o Fim do Jogo*/}

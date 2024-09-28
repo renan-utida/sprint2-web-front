@@ -103,25 +103,7 @@ export const DivCabecalho = styled.div`
         
         .login-btn{
             margin-left: 8px;
-            font-size: 1.0rem;
-        }
-    }
-    
-    @media screen and (max-width: 520px){
-        padding: 18px 12px;
-        
-        .hamburger-search{
-            gap: 0.55rem;
-        }
-        
-        .logo{
-            height: 40px;
-            max-width: 165px;
-        }
-        
-        .login-btn{
-            margin-left: 6px;
-            font-size: 0.9rem;
+            font-size: 1.05rem;
         }
     }
     
@@ -133,14 +115,14 @@ export const DivCabecalho = styled.div`
         }
         
         .logo{
-            height: 36px;
-            max-width: 155px;
+            height: 40px;
+            max-width: 165px;
         }
         
         .login-btn{
             margin-left: 3px;
-            font-size: 0.85rem;
-            padding: 8px 9px;
+            font-size: 0.95rem;
+            padding: 8px 10px;
         }
     }
     
@@ -158,7 +140,7 @@ export const DivCabecalho = styled.div`
         
         .login-btn{
             margin-left: 0px;
-            font-size: 0.80rem;
+            font-size: 0.85rem;
             padding: 8px 8px;
         }
         
@@ -248,7 +230,95 @@ export const MenuCabecalho = styled.div`
     li a:hover{
         background-color: rgba(255, 255, 255, 0.421);
     }
-`
+
+    @media screen and (max-width: 1000px){
+        #btn-menu{
+            padding: 0 1rem 0 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        #menu{
+            width: 320px;
+        }
+        
+        #menu li a{
+            padding: 1.3rem 0.9rem;
+        }
+    }
+    
+    @media screen and (max-width: 700px){
+        font-size: 17px;
+        #btn-menu{
+            padding: 0 .9rem 0 0.8rem;
+        }
+        
+        #hamburger{
+            width: 25px;
+        }
+    
+        #hamburger::after, #hamburger::before {
+            width: 25px;
+        }
+
+        #menu{
+            width: 300px;
+        }
+    
+        #menu li a{
+            padding: 1.2rem 0.85rem;
+        }
+    }
+
+    @media screen and (max-width: 520px){
+        font-size: 16px;
+
+        #btn-menu{
+            padding: 0 0.7rem 0 0.6rem;
+        }
+        
+        #hamburger{
+            border-top: 3.1px solid;
+            width: 24px;
+        }
+        
+        #hamburger::after, #hamburger::before {
+            width: 24px;
+            height: 2.2px;
+        }
+        
+        #menu{
+            width: 260px;
+        }
+        
+        #menu li a{
+            padding: 1.15rem 0.8rem;
+        }
+    }
+
+    @media screen and (max-width: 360px){
+        font-size: 15px;
+
+        #btn-menu{
+            padding: 0 0.6rem 0 0.5rem;
+        }
+        
+        #hamburger{
+            width: 23px;
+        }
+        
+        #hamburger::after, #hamburger::before {
+            width: 23px;
+        }
+        
+        #menu{
+            width: 235px;
+        }
+        
+        #menu li a{
+            padding: 1.05rem 0.7rem;
+        }
+    }
+    `
 
 
 

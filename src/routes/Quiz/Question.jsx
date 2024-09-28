@@ -22,7 +22,7 @@ const Question =()=>{
 
     return(
         <DivQuestion id="question">
-            <p>Pergunta {quizState.currentQuestion + 1} de {quizState.questions.length}</p>
+            <p className="contagem-perguntas">Pergunta {quizState.currentQuestion + 1} de {quizState.questions.length}</p>
             <h2>{currentQuestion.question}</h2>
             <div id="options-container">
                 {shuffledOptions.map((option) => (
