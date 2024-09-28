@@ -1,13 +1,13 @@
 import { SectionCorpoNoticia } from "../noticia-geral-styled"
-import CorridaMarrocos from "../../../assets/corrida-formulae-marrocos.jpg"
-import ImagemCorrida from "../../../assets/novos-horizontes.jpg"
+import CorridaMarrocos from "../../../assets/images/corrida-formulae-marrocos.jpg"
+import ImagemCorrida from "../../../assets/images/novos-horizontes.jpg"
 
 import ExtraCorrida from "./ExtraCorrida"
 
-import EventoInfo1 from "../../../assets/evento-formulae.png"
-import EficienciaInfo2 from "../../../assets/eficiencia-formulae.jpg"
-import PesquisaInfo3 from "../../../assets/pesquisa-formulae.jpg"
-import CarroInfo4 from "../../../assets/carro-formulae.jpg"
+import EventoInfo1 from "../../../assets/images/evento-formulae.png"
+import EficienciaInfo2 from "../../../assets/images/eficiencia-formulae.jpg"
+import PesquisaInfo3 from "../../../assets/images/pesquisa-formulae.jpg"
+import CarroInfo4 from "../../../assets/images/carro-formulae.jpg"
 
 
 const CorpoCorrida=()=>{

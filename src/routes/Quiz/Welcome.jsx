@@ -1,8 +1,8 @@
 import { useContext, useEffect, useRef } from 'react';
 import { QuizContext } from '../../context/quiz';
 
-import Quiz from '../../assets/quiz.png';
-import raceAudio from '../../audio/corrida.mp3';
+import Quiz from '../../assets/images/quiz.png';
+import raceAudio from '../../assets/audio/corrida.mp3';
 
 import { WelcomeSection } from "./quiz-styled";
 

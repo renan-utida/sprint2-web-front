@@ -1,7 +1,7 @@
 import { MainFormulaE } from "./formulae-styled"
 import AccordionInfo from "./AccordionInfo"
-import VideoBg from "../../video/video-formulae.mp4"
-import ABBFormulaE from "../../assets/abb-formulae-logo.png"
+import VideoBg from "../../assets/video/video-formulae.mp4"
+import ABBFormulaE from "../../assets/images/abb-formulae-logo.png"
 
 const FormulaE = () => {
 

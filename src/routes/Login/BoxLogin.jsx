@@ -1,8 +1,8 @@
 import { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import IconUsuario from "../../assets/icons8-usuario.png";
-import IconSenha from "../../assets/icons8-trancar.png";
+import IconUsuario from "../../assets/images/icons8-usuario.png";
+import IconSenha from "../../assets/images/icons8-trancar.png";
 
 import { SectionLogin } from "./login-styled";
 

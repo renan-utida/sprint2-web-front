@@ -1,13 +1,13 @@
 import { SectionCorpoNoticia } from "../noticia-geral-styled"
-import EventoFormulaE from "../../../assets/evento-formulae-india.jpg"
-import EventoIndia from '../../../assets/evento-formulae.png';
+import EventoFormulaE from "../../../assets/images/evento-formulae-india.jpg"
+import EventoIndia from '../../../assets/images/evento-formulae.png';
 
 import ExtraEventos from "./ExtraEventos"
 
-import EficienciaInfo1 from "../../../assets/eficiencia-formulae.jpg"
-import PesquisaInfo2 from "../../../assets/pesquisa-formulae.jpg"
-import CarroInfo3 from "../../../assets/carro-formulae.jpg"
-import HorizonteInfo4 from "../../../assets/novos-horizontes.jpg"
+import EficienciaInfo1 from "../../../assets/images/eficiencia-formulae.jpg"
+import PesquisaInfo2 from "../../../assets/images/pesquisa-formulae.jpg"
+import CarroInfo3 from "../../../assets/images/carro-formulae.jpg"
+import HorizonteInfo4 from "../../../assets/images/novos-horizontes.jpg"
 
 
 const CorpoEventos=()=>{

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import HeaderBackground from "../../assets/header-background.png";
+import HeaderBackground from "../../assets/images/header-background.png";
 
 export const HeaderCabecalho = styled.header`
     height: 75px;

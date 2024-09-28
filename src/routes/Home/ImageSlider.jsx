@@ -9,11 +9,11 @@ import {
   Dot, 
 } from './home-styled';
 // Import das imagens do SlideshowContainer
-import CarroNoticia1 from '../../assets/carro-formulae.jpg';
-import HorizonteNoticia2 from '../../assets/novos-horizontes.jpg';
-import EventoNoticia3 from '../../assets/evento-formulae.png';
-import EficienciaNoticia4 from '../../assets/eficiencia-formulae.jpg';
-import PesquisaNoticia5 from '../../assets/pesquisa-formulae.jpg';
+import CarroNoticia1 from '../../assets/images/carro-formulae.jpg';
+import HorizonteNoticia2 from '../../assets/images/novos-horizontes.jpg';
+import EventoNoticia3 from '../../assets/images/evento-formulae.png';
+import EficienciaNoticia4 from '../../assets/images/eficiencia-formulae.jpg';
+import PesquisaNoticia5 from '../../assets/images/pesquisa-formulae.jpg';
 
 const ImageSlider=()=>{
 

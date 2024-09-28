@@ -1,7 +1,7 @@
 import { MainError } from "./error-styled"
 import { Link } from "react-router-dom"
 
-import LogoError from "../../assets/logo-abb-semfundo.png"
+import LogoError from "../../assets/images/logo-abb-semfundo.png"
 
 const Error=()=>{
 

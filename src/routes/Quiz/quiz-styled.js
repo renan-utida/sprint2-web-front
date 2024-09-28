@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import QuizBackground from "../../assets/quiz-background.png"
+import QuizBackground from "../../assets/images/quiz-background.png"
 
 // Definindo a animação para mover a imagem da direita para o centro
 const slideIn = keyframes`

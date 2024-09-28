@@ -1,13 +1,13 @@
 import { SectionCorpoNoticia } from "../noticia-geral-styled"
-import MahindraLidera from "../../../assets/mahindra-lidera.jpg"
-import MahindraEquipe from '../../../assets/pesquisa-formulae.jpg';
+import MahindraLidera from "../../../assets/images/mahindra-lidera.jpg"
+import MahindraEquipe from '../../../assets/images/pesquisa-formulae.jpg';
 
 import ExtraPesquisa from "./ExtraPesquisa"
 
-import CarroInfo1 from "../../../assets/carro-formulae.jpg"
-import HorizonteInfo2 from "../../../assets/novos-horizontes.jpg"
-import EventoInfo3 from "../../../assets/evento-formulae.png"
-import EficienciaInfo4 from "../../../assets/eficiencia-formulae.jpg"
+import CarroInfo1 from "../../../assets/images/carro-formulae.jpg"
+import HorizonteInfo2 from "../../../assets/images/novos-horizontes.jpg"
+import EventoInfo3 from "../../../assets/images/evento-formulae.png"
+import EficienciaInfo4 from "../../../assets/images/eficiencia-formulae.jpg"
 
 const CorpoPesquisa=()=>{
 

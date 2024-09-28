@@ -1,8 +1,8 @@
 import { HeaderCabecalho, DivCabecalho } from "./nav-styled";
 import { Link } from "react-router-dom";
-import PesquisaIcone from "../../assets/logo-pesquisa.png";
+import PesquisaIcone from "../../assets/images/logo-pesquisa.png";
+import LogoFormulae from "../../assets/images/logo-formulae.png";
 import MenuHamburger from "./MenuHamburger";
-import LogoFormulae from "../../assets/logo-formulae.png";
 
 
 const Nav=()=>{

@@ -1,13 +1,13 @@
 import { SectionCorpoNoticia } from "../noticia-geral-styled"
-import SustentabilidadeFormulaE from "../../../assets/sustentabilidade-formulae.jpg"
-import EficienciaFormulaE from '../../../assets/eficiencia-formulae.jpg';
+import SustentabilidadeFormulaE from "../../../assets/images/sustentabilidade-formulae.jpg"
+import EficienciaFormulaE from '../../../assets/images/eficiencia-formulae.jpg';
 
 import ExtraSustentabilidade from "./ExtraSustentabilidade"
 
-import PesquisaInfo1 from "../../../assets/pesquisa-formulae.jpg"
-import CarroInfo2 from "../../../assets/carro-formulae.jpg"
-import HorizonteInfo3 from "../../../assets/novos-horizontes.jpg"
-import EventoInfo4 from "../../../assets/evento-formulae.png"
+import PesquisaInfo1 from "../../../assets/images/pesquisa-formulae.jpg"
+import CarroInfo2 from "../../../assets/images/carro-formulae.jpg"
+import HorizonteInfo3 from "../../../assets/images/novos-horizontes.jpg"
+import EventoInfo4 from "../../../assets/images/evento-formulae.png"
 
 
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import LoginBackground from "../../assets/login-background.png"
+import LoginBackground from "../../assets/images/login-background.png"
 
 export const MainLogin = styled.main`
     margin-top: 75px;

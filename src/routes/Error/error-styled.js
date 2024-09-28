@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ErrorBackground from '../../assets/error-background.png'; // Importando a imagem de fundo
+import ErrorBackground from '../../assets/images/error-background.png'; // Importando a imagem de fundo
 
 export const MainError = styled.main`
     background: url(${ErrorBackground}) no-repeat center / cover;

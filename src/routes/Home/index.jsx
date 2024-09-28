@@ -3,11 +3,11 @@ import { MainHome } from './home-styled';
 import ImageSlider from './ImageSlider';
 import InfoContent from './InfoContent';
 
-import CarroInfo1 from '../../assets/carro-formulae.jpg';
-import HorizonteInfo2 from '../../assets/novos-horizontes.jpg';
-import EventoInfo3 from '../../assets/evento-formulae.png';
-import EficienciaInfo4 from '../../assets/eficiencia-formulae.jpg';
-import PesquisaInfo5 from '../../assets/pesquisa-formulae.jpg';
+import CarroInfo1 from '../../assets/images/carro-formulae.jpg';
+import HorizonteInfo2 from '../../assets/images/novos-horizontes.jpg';
+import EventoInfo3 from '../../assets/images/evento-formulae.png';
+import EficienciaInfo4 from '../../assets/images/eficiencia-formulae.jpg';
+import PesquisaInfo5 from '../../assets/images/pesquisa-formulae.jpg';
 
 const Home=()=>{
 

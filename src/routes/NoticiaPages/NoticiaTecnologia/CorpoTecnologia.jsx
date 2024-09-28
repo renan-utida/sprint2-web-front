@@ -1,13 +1,13 @@
 import { SectionCorpoNoticia } from "../noticia-geral-styled"
 import ExtraTecnologia from "./ExtraTecnologia"
 
-import CarroFormulaE from "../../../assets/carro-formulae.jpg"
-import ImagemTecnologia from "../../../assets/noticia-tecnologia-formulae.jpg"
+import CarroFormulaE from "../../../assets/images/carro-formulae.jpg"
+import ImagemTecnologia from "../../../assets/images/noticia-tecnologia-formulae.jpg"
 
-import HorizonteInfo1 from "../../../assets/novos-horizontes.jpg"
-import EventoInfo2 from "../../../assets/evento-formulae.png"
-import EficienciaInfo3 from "../../../assets/eficiencia-formulae.jpg"
-import PesquisaInfo4 from "../../../assets/pesquisa-formulae.jpg"
+import HorizonteInfo1 from "../../../assets/images/novos-horizontes.jpg"
+import EventoInfo2 from "../../../assets/images/evento-formulae.png"
+import EficienciaInfo3 from "../../../assets/images/eficiencia-formulae.jpg"
+import PesquisaInfo4 from "../../../assets/images/pesquisa-formulae.jpg"
 
 const CorpoTecnologia=()=>{
 
