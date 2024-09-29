@@ -15,6 +15,7 @@ import ProximasCorridas from './routes/ProximasCorridas/index.jsx'
 import PilotoPage from './routes/PilotoPage/index.jsx'
 import Quiz from './routes/Quiz/index.jsx'
 import Login from './routes/Login/index.jsx'
+import CriarConta from './routes/CriarConta/index.jsx'
 import Error from './routes/Error'
 
 /*Criando a função createBrowserRouter*/
@@ -36,8 +37,9 @@ const router = createBrowserRouter ([
       { path: '/formulae', element: <FormulaE/>},
       { path: '/proximas-corridas', element: <ProximasCorridas/>},
       { path: '/piloto-page', element: <PilotoPage/>},
-      { path: '/quiz', element: <Quiz/>},
       { path: '/login', element: <Login/>},
+      { path: '/criar-conta', element: <CriarConta/>},
+      { path: '/quiz', element: <Quiz/>},
     ]
   }
 ])

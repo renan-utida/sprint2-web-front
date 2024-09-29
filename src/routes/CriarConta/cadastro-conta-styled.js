@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import LoginBackground from "../../assets/images/login-background.png"
+import CriarContaBackground from "../../assets/images/criar-conta-background.jpg"
 
-export const MainLogin = styled.main`
+export const MainCriarConta = styled.main`
     margin-top: 75px;
     text-shadow: #000 1px 1px;
     background-color: rgb(220, 220, 230);
@@ -9,10 +9,10 @@ export const MainLogin = styled.main`
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(${LoginBackground}) no-repeat center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(${CriarContaBackground}) no-repeat center / cover;
 `
 
-export const SectionLogin = styled.section`
+export const SectionNovoUsuario = styled.section`
     width: 450px;
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);

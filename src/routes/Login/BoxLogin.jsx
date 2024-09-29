@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import IconUsuario from "../../assets/images/icons8-usuario.png";
 import IconSenha from "../../assets/images/icons8-trancar.png";
@@ -25,7 +25,7 @@ const BoxLogin = () => {
                 usuarios[i].usuario == usuario.current.value &&
                 usuarios[i].senha == senha.current.value
             )
-            return true;
+            return true
         }
     };
 
@@ -51,7 +51,7 @@ const BoxLogin = () => {
     // até api e tras os dados
     useEffect(() => {
         //Pega a url da api
-        fetch("http://localhost:5000/usuarios")
+        fetch("http://localhost:5002/usuarios")
 
         // Promise
         .then((res) => {
@@ -102,10 +102,9 @@ const BoxLogin = () => {
 
                 <div className="signup-link">
                     <p>Não possui uma conta?</p>
-                    <a href="#">Criar</a>
+                    <Link to="/criar-conta">Criar</Link>
                 </div>
             </form>
-
         </SectionLogin>
     )
 }
