@@ -36,15 +36,6 @@ const Footer=()=>{
                         <li><Link to="/contato">Contato</Link></li>
                     </ul>
                 </div>
-                <div className="footer-termos">
-                    <h2>Termos</h2>
-                    <ul>
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Acessibilidade</a></li>
-                        <li><a href="#">Cookies</a></li>
-                        <li><a href="#">Suporte</a></li>
-                    </ul>
-                </div>
                 <div className="footer-contactus">
                     <h2>Contact us</h2>
                     <ul>
@@ -58,13 +49,22 @@ const Footer=()=>{
                         </li>
                         <li>
                             <FaLocationDot className="icon-map" />
-                            <p>Av. Paulista, 1234 - 3º andar - Bela Vista, São Paulo - SP, 00000-000</p>
+                            <p className="local">Av. Paulista, 1234 - 3º andar - Bela Vista, São Paulo - SP, 00000-000</p>
                         </li>
                         <li></li>
                     </ul>
                 </div>
+                <div className="footer-termos">
+                    <h2>Termos</h2>
+                    <ul>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Acessibilidade</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Suporte</a></li>
+                    </ul>
+                </div>
             </nav>
-            <div className="footer-local">
+            <div className="footer-direitos">
                 <p>@2024-Todos os direitos reservados</p>
             </div>
         </FooterRodape>
