@@ -9,7 +9,7 @@ export const MainCriarConta = styled.main`
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(${CriarContaBackground}) no-repeat center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url(${CriarContaBackground}) no-repeat center / cover;
 `
 
 export const SectionNovoUsuario = styled.section`

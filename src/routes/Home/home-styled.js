@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import HomeBackground from "../../assets/images/home-background.png"
 
 /*----------------------------------------------------------*/
 /*Estilização geral para o Home*/
@@ -60,7 +61,8 @@ export const MainHome = styled.main`
     }
     .info-extra{
         grid-area: info-extra;
-        background-color: darkblue;
+        background: url(${HomeBackground}) no-repeat center / cover;
+
     }
 `
 
