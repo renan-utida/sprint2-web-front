@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import HomeBackground from "../../assets/images/home-background.png"
+import HomeBackgroundLeft from "../../assets/images/home-background-l.png"
+import HomeBackgroundRight from "../../assets/images/home-background-r.png"
 
 /*----------------------------------------------------------*/
 /*Estilização geral para o Home*/
@@ -7,24 +8,24 @@ export const MainHome = styled.main`
 
     display: grid;
     padding-top: 75px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 9fr 1fr;
     grid-auto-rows: 150px;
     grid-template-areas:
-        'slideshow  slideshow   slideshow   slideshow'
-        'slideshow  slideshow   slideshow   slideshow'
-        'slideshow  slideshow   slideshow   slideshow'
-        'slideshow  slideshow   slideshow   slideshow'
-        'info-extra recente     recente     recente'
-        'info-extra noticia1    noticia1    noticia1'
-        'info-extra noticia1    noticia1    noticia1'
-        'info-extra noticia2    noticia2    noticia2'
-        'info-extra noticia2    noticia2    noticia2'
-        'info-extra noticia3    noticia3    noticia3'
-        'info-extra noticia3    noticia3    noticia3'
-        'info-extra noticia4    noticia4    noticia4'
-        'info-extra noticia4    noticia4    noticia4'
-        'info-extra noticia5    noticia5    noticia5'
-        'info-extra noticia5    noticia5    noticia5'
+        'slideshow      slideshow   slideshow'
+        'slideshow      slideshow   slideshow'
+        'slideshow      slideshow   slideshow'
+        'slideshow      slideshow   slideshow'
+        'info-extra-l   recente     info-extra-r'
+        'info-extra-l   noticia1    info-extra-r'
+        'info-extra-l   noticia1    info-extra-r'
+        'info-extra-l   noticia2    info-extra-r'
+        'info-extra-l   noticia2    info-extra-r'
+        'info-extra-l   noticia3    info-extra-r'
+        'info-extra-l   noticia3    info-extra-r'
+        'info-extra-l   noticia4    info-extra-r'
+        'info-extra-l   noticia4    info-extra-r'
+        'info-extra-l   noticia5    info-extra-r'
+        'info-extra-l   noticia5    info-extra-r'
     ;
 
     .recente{
@@ -59,10 +60,15 @@ export const MainHome = styled.main`
     .info5{
         grid-area: noticia5;
     }
-    .info-extra{
-        grid-area: info-extra;
-        background: url(${HomeBackground}) no-repeat center / cover;
 
+    .info-extra-l{
+        grid-area: info-extra-l;
+        background: url(${HomeBackgroundLeft}) no-repeat center / cover;
+    }
+
+    .info-extra-r{
+        grid-area: info-extra-r;
+        background: url(${HomeBackgroundRight}) no-repeat center / cover;
     }
 `
 

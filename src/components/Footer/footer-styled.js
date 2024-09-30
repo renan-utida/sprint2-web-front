@@ -7,7 +7,7 @@ export const FooterRodape = styled.footer`
     min-height: 300px;
     padding: 5rem 8rem 3rem 8rem;
     background-color: #04044c;
-    border-top: 2px solid #5a5aff;
+    border-top: 1px solid #5a5aff;
     
     nav{
         display: flex;

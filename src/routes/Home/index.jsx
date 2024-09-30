@@ -74,7 +74,8 @@ const Home=()=>{
                 />
             </section>
             
-            <section className="info-extra"></section>
+            <section className="info-extra-l"></section>
+            <section className="info-extra-r"></section>
         </MainHome>
     )
 }
