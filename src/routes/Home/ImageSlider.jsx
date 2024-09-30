@@ -65,12 +65,12 @@ const ImageSlider=()=>{
       {
         image: EventoNoticia3,
         title: 'Fãs da Fórmula E celebram Mahindra Racing em evento exclusivo na Índia',
-        subtitle: 'Evento em Mumbai reúne milhares de fãs e mostra crescimento do esporte no país.',
+        subtitle: 'Evento em Mumbai reúne milhares de fãs e mostra crescimento e popularidade do esporte no país.',
         link: '/noticia-eventos',
       },
       {
         image: EficienciaNoticia4,
-        title: 'Recorde de Eficiência: Equipes da Fórmula E Atingem 99% de Aproveitamento Energético em Nova Temporada',
+        title: 'Recorde de Eficiência: Equipes Atingem 99% de Aproveitamento Energético em Nova Temporada',
         subtitle: 'A última geração de carros elétricos estabelece novos padrões de eficiência, transformando a Fórmula E em um laboratório para a indústria automotiva.',
         link: '/noticia-sustentabilidade',
       },
