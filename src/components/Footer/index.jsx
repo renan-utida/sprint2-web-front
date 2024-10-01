@@ -9,6 +9,15 @@ import { Link } from "react-router-dom";
 
 const Footer=()=>{
 
+    // Função para navegar ao quiz, verificando se o usuário está autenticado
+    const handleQuizNavigation = () => {
+        if (isAuthenticated) {
+            navigate("/quiz");
+        } else {
+            navigate("/login");
+        }
+    };
+
     return(
         <FooterRodape>
             <nav>
@@ -33,7 +42,9 @@ const Footer=()=>{
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/formulae">Formula E</Link></li>
                         <li><Link to="/noticia-tecnologia">Tecnologia</Link></li>
-                        <li><Link to="/quiz">Quiz</Link></li>
+                        <li>
+                            <button onClick={handleQuizNavigation}>Quiz</button>
+                        </li>
                     </ul>
                 </div>
                 <div className="footer-contactus">
