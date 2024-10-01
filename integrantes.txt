@@ -1,0 +1,15 @@
+Sprint 3 - Front End e Web Development
+Turma: 1ESPG
+Formula E Website - Entrega: 30/09/2024
+
+Integrantes (Innovation Masters):
+
+Fabricio Carlos Duarte Rossi Junior - RM 555017
+Gustavo Melanda Da Nova - RM 556081
+Murilo Justi Rodrigues - RM 554512
+Renan Dias Utida - RM 558540
+Leonardo Rocha - RM 555460
+
+Link do GitHub:
+
+https://github.com/Innovation-Masters/sprint2-web-front
