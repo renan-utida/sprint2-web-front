@@ -32,8 +32,8 @@ const Footer=()=>{
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/formulae">Formula E</Link></li>
-                        <li><Link to="/proximas-corridas">Próximas Corridas</Link></li>
-                        <li><Link to="/contato">Contato</Link></li>
+                        <li><Link to="/noticia-tecnologia">Tecnologia</Link></li>
+                        <li><Link to="/quiz">Quiz</Link></li>
                     </ul>
                 </div>
                 <div className="footer-contactus">

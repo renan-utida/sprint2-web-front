@@ -29,6 +29,7 @@ export const DivCabecalho = styled.div`
         width: 30px;
         height: 30px;
         margin-bottom: 0.2rem;
+        display: none;
     }
     
     .logo{
@@ -219,8 +220,8 @@ export const MenuCabecalho = styled.div`
     }
 
     #menu li a{
-        display: block;
         padding: 1.4rem 1rem;
+        display: block;
         margin: 0.2rem 0.3rem;
         color: white;
         text-decoration: none;
