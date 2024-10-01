@@ -18,7 +18,6 @@ const MenuHamburger=()=>{
         setMenuActive(false);
     };
 
-    // Função para navegar ao quiz, verificando se o usuário está autenticado
     const handleQuizNavigation = () => {
         if (isAuthenticated) {
             navigate("/quiz");
@@ -41,14 +40,7 @@ const MenuHamburger=()=>{
                     <li><Link to="/noticia-eventos">Noticia Eventos</Link></li>
                     <li><Link to="/noticia-sustentabilidade">Notícia Sustentabilidade</Link></li>
                     <li><Link to="/noticia-pesquisa">Notícia Pesquisa</Link></li>
-                    <li>
-                            <button onClick={() => {
-                                closeMenu();
-                                handleQuizNavigation();
-                            }}>
-                                Quiz
-                            </button>
-                        </li>
+                    <li><Link to="/login" onClick={closeMenu}>Quiz</Link></li>
                     <li><Link to="/login" onClick={closeMenu}>Login</Link></li>
                 </ul>
             </nav>
