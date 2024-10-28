@@ -11,9 +11,25 @@ export const SectionInfo = styled.section`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 4rem;
+    margin: 4rem 0;
 `
 
 export const DivLugar = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    width: 450px;
+    height: 500px;
+    color: white;
 
+    border: 4px solid #0000ff;
+    border-radius: 0.8rem;
+    background-color: #00005A;
+
+    .data-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
 `
