@@ -1,11 +1,11 @@
-import { SectionInfo } from "./corridas-styled"
+import { DivLugar, SectionInfo } from "./corridas-styled"
 
 
 const BoxInfo = () => {
 
     return(
         <SectionInfo>
-            <div>
+            <DivLugar>
                 <div>
                     <h3>07 DEZ</h3>
                     <h3>ROUND 1</h3>
@@ -28,8 +28,8 @@ const BoxInfo = () => {
                         <p>60%</p>
                     </div>
                 </div>
-            </div>
-            <div>
+            </DivLugar>
+            <DivLugar>
                 <div>
                     <h3>11 JAN</h3>
                     <h3>ROUND 2</h3>
@@ -52,8 +52,8 @@ const BoxInfo = () => {
                         <p>52%</p>
                     </div>
                 </div>
-            </div>
-            <div>
+            </DivLugar>
+            <DivLugar>
                 <div>
                     <h3>14 FEV</h3>
                     <h3>ROUND 3</h3>
@@ -64,7 +64,7 @@ const BoxInfo = () => {
                     <img src="#" alt="Bandeira da Arabia Saudita" />
                     <h3>ARÁBIA SAUDITA</h3>
                 </div>
-                <p>JEDDAH E-PRIX</p>
+                <h4>JEDDAH E-PRIX</h4>
                 <div>
                     <button>Mais Informações</button>
                     <div>
@@ -76,7 +76,7 @@ const BoxInfo = () => {
                         <p>40%</p>
                     </div>
                 </div>
-            </div>
+            </DivLugar>
         </SectionInfo>
     )
 }
