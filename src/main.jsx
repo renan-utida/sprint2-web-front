@@ -16,6 +16,7 @@ import Quiz from './routes/Quiz/index.jsx'
 import Login from './routes/Login/index.jsx'
 import CriarConta from './routes/CriarConta/index.jsx'
 import Error from './routes/Error'
+import MaisInformacoes from './routes/MaisInfo/index.jsx'
 
 /*Criando a função createBrowserRouter*/
 const router = createBrowserRouter ([
@@ -38,6 +39,7 @@ const router = createBrowserRouter ([
       { path: '/criar-conta', element: <CriarConta/>},
       { path: '/quiz', element: <Quiz/>},
       { path: '/proximas-corridas', element: <ProximasCorridas/>},
+      { path: '/mais-informacoes', element: <MaisInformacoes/>},
     ]
   }
 ])

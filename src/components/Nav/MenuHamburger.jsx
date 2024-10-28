@@ -43,6 +43,7 @@ const MenuHamburger=()=>{
                     <li><Link to="/noticia-pesquisa" onClick={closeMenu}>Notícia Pesquisa</Link></li>
                     <li><Link to="/login" onClick={closeMenu}>Quiz</Link></li>
                     <li><Link to="/login" onClick={closeMenu}>Login</Link></li>
+                    <li><Link to='/mais-informacoes' onClick={closeMenu}>Mais Informações</Link></li>
                 </ul>
             </nav>
         </MenuCabecalho>
