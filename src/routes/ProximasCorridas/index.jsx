@@ -6,6 +6,7 @@ const ProximasCorridas = () => {
 
     return (
         <MainCorridas>
+            <h1>Próximas Corridas</h1>
             <BoxInfo/>
         </MainCorridas>
     )

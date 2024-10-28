@@ -32,7 +32,7 @@ const Footer=()=>{
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/formulae">Formula E</Link></li>
-                        <li><Link to="/noticia-tecnologia">Tecnologia</Link></li>
+                        <li><Link to="/proximas-corridas">Próximas Corridas</Link></li>
                         <li><Link to="/login">Quiz</Link></li>
                     </ul>
                 </div>
