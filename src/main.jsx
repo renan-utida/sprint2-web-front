@@ -11,6 +11,7 @@ import NoticiaEventos from './routes/NoticiaPages/NoticiaEventos/index.jsx'
 import NoticiaSustentabilidade from './routes/NoticiaPages/NoticiaSustentabilidade/index.jsx'
 import NoticiaPesquisa from './routes/NoticiaPages/NoticiaPesquisa/index.jsx'
 import FormulaE from './routes/FormulaPage/index.jsx'
+import ProximasCorridas from './routes/ProximasCorridas/index.jsx'
 import Quiz from './routes/Quiz/index.jsx'
 import Login from './routes/Login/index.jsx'
 import CriarConta from './routes/CriarConta/index.jsx'
@@ -36,6 +37,7 @@ const router = createBrowserRouter ([
       { path: '/login', element: <Login/>},
       { path: '/criar-conta', element: <CriarConta/>},
       { path: '/quiz', element: <Quiz/>},
+      { path: '/proximas-corridas', element: <ProximasCorridas/>},
     ]
   }
 ])
