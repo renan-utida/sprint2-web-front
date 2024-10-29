@@ -3,11 +3,45 @@ import styled from "styled-components";
 export const MainMaisInfo = styled.section`
     min-height: 100vh;
     margin-top: 75px;
+
+    .titulo-telemetria {
+        text-align: center;
+    }
+`
+
+export const DivTelemetria = styled.div `
+    
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-top: 50px;
+    margin-left: 100px;
+
+    .localizacao {
+        display: flex;
+        align-items: center;
+    }
+        
+    .info-pista {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+    }
+
+    .telemetria-info {
+        display: flex;
+        align-items: center;
+    }
 `
 
 export const Icone = styled.img`
     width: 32px;
     height: 32px;
+`
+
+export const Runners = styled.section `
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 `
 
 export const DivInfo = styled.div`
@@ -65,12 +99,6 @@ export const DivInfo = styled.div`
 
     .nome-piloto{
         font-size: 25px;
-    }
-
-    .titulo-telemetria{
-        font-size: 35px;
-        margin: 50px;
-        text-decoration: underline;
     }
 
     .pilotos{
