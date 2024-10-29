@@ -13,26 +13,75 @@ const pilotosData = {
             "nome": "Lucas",
             "sobrenome": "di Grassi",
             "foto": "src/assets/images/iconPiloto.png",
-            "fotoCarro": "src/assets/images/iconCarro.png"
+            "fotoCarro": "src/assets/images/iconCarro8.png"
         },
         {
             "nome": "Sergio",
             "sobrenome": "Sette Camara",
             "foto": "src/assets/images/iconPiloto2.png",
-            "fotoCarro": "src/assets/images/iconCarro.png"
+            "fotoCarro": "src/assets/images/iconCarro2.png"
         },
         {
-            "nome": "Sergio",
-            "sobrenome": "Sette Camara",
-            "foto": "src/assets/images/iconPiloto2.png",
-            "fotoCarro": "src/assets/images/iconCarro.png"
+            "nome": "Pascal",
+            "sobrenome": "Wehrlein",
+            "foto": "src/assets/images/iconPiloto3.png",
+            "fotoCarro": "src/assets/images/iconCarro3.png"
         },
         {
-            "nome": "Sergio",
-            "sobrenome": "Sette Camara",
-            "foto": "src/assets/images/iconPiloto2.png",
-            "fotoCarro": "src/assets/images/iconCarro.png"
-        }
+            "nome": "Mitch",
+            "sobrenome": "Evans",
+            "foto": "src/assets/images/iconPiloto4.png",
+            "fotoCarro": "src/assets/images/iconCarro4.png"
+        },
+
+        {
+            "nome": "Nick",
+            "sobrenome": "Cassidy",
+            "foto": "src/assets/images/iconPiloto5.png",
+            "fotoCarro": "src/assets/images/iconCarro5.png"
+        },
+        {
+            "nome": "Oliver",
+            "sobrenome": "Rowland",
+            "foto": "src/assets/images/iconPiloto6.png",
+            "fotoCarro": "src/assets/images/iconCarro6.png"
+        },
+        {
+            "nome": "Jean-Eric",
+            "sobrenome": "Vergne",
+            "foto": "src/assets/images/iconPiloto7.png",
+            "fotoCarro": "src/assets/images/iconCarro7.png"
+        },
+        {
+            "nome": "Antonio",
+            "sobrenome": "Da Costa",
+            "foto": "src/assets/images/iconPiloto8.png",
+            "fotoCarro": "src/assets/images/iconCarro8.png"
+        },
+        {
+            "nome": "Jake",
+            "sobrenome": "Dennis",
+            "foto": "src/assets/images/iconPiloto9.png",
+            "fotoCarro": "src/assets/images/iconCarro9.png"
+        },
+        {
+            "nome": "Max",
+            "sobrenome": "Gunther",
+            "foto": "src/assets/images/iconPiloto10.png",
+            "fotoCarro": "src/assets/images/iconCarro10.png"
+        },
+        {
+            "nome": "Robin",
+            "sobrenome": "Frijns",
+            "foto": "src/assets/images/iconPiloto11.png",
+            "fotoCarro": "src/assets/images/iconCarro11.png"
+        },
+        {
+            "nome": "Stoffel",
+            "sobrenome": "Vandoorne",
+            "foto": "src/assets/images/iconPiloto12.png",
+            "fotoCarro": "src/assets/images/iconCarro12.png"
+        },
     ]
 };
 
@@ -119,7 +168,7 @@ const BoxMaisInfo = () => {
                                     <Icone src={iconDistancia} alt="distância" />
                                     <p>{dadosIoT.distance !== null ? `${dadosIoT.distance} m` : 'Carregando...'}</p>
                                 </div>
-                                <img src={piloto.fotoCarro} alt={`carro de ${piloto.nome}`} />
+                                <img className="img-carro" src={piloto.fotoCarro} alt={`carro de ${piloto.nome}`} />
                             </div>
                         </div>
                     </DivInfo>
