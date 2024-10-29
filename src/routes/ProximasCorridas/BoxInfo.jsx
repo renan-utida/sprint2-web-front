@@ -6,6 +6,7 @@ import corridasData from './corridasData';
 import TemperaturaCorridas from '../../assets/images/temperatura-corridas.png';
 import UmidadeCorridas from '../../assets/images/umidade-corridas.png';
 
+
 const BoxInfo = () => {
   return (
     <SectionInfo>
