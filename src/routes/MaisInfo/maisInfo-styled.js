@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const MainMaisInfo = styled.section`
   min-height: 100vh;
   margin-top: 75px;
+  padding: 0 20px;
 
   .titulo-telemetria {
     text-align: center;
@@ -22,11 +23,12 @@ export const DivTelemetria = styled.div`
   flex-direction: column;
   row-gap: 1rem;
   margin-top: 50px;
-  margin-left: 100px;
+  padding: 0 20px;
 
   .localizacao {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .info-pista {
@@ -52,7 +54,9 @@ export const Icone = styled.img`
 
 export const Runners = styled.section`
   display: grid;
-  grid-template-columns: repeat(3, 650px);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 10px;
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
@@ -65,33 +69,17 @@ export const Runners = styled.section`
 
 export const DivInfo = styled.div`
   margin-top: 50px;
-  margin-left: 20px;
+  padding: 0 20px;
 
   .local-data {
     display: flex;
     gap: 75px;
   }
 
-  .local {
-    display: flex;
-    gap: 10px;
-  }
-
-  .temperatura {
-    display: flex;
-    gap: 10px;
-  }
-
-  .umidade {
-    display: flex;
-    gap: 10px;
-  }
-
-  .velocidade {
-    display: flex;
-    gap: 10px;
-  }
-
+  .local,
+  .temperatura,
+  .umidade,
+  .velocidade,
   .distancia {
     display: flex;
     gap: 10px;
@@ -99,16 +87,16 @@ export const DivInfo = styled.div`
 
   .card-piloto {
     display: flex;
-    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
     background-color: #4646ff;
     color: white;
-    border-radius: 50px;
-    width: 100%;
-    min-height: 300px;
-    flex-direction: column;
-    align-items: center;
+    border-radius: 20px;
     padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    min-height: 300px;
   }
 
   .conteudo-card-piloto {
@@ -126,8 +114,8 @@ export const DivInfo = styled.div`
   }
 
   .img-carro {
-    width: 100px;
-    height: 30px;
+    width: 140px;
+    height: auto;
   }
 
   @media (max-width: 768px) {
@@ -138,4 +126,5 @@ export const DivInfo = styled.div`
       width: 80px;
       height: 25px;
     }
-  }`
+  }
+`;
