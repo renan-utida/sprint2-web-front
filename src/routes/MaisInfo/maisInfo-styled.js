@@ -41,13 +41,13 @@ export const Icone = styled.img`
 
 export const Runners = styled.section `
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 33%);
 `
 
 export const DivInfo = styled.div`
     
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 20px;
 
     .local-data{
         display:flex;
@@ -86,8 +86,8 @@ export const DivInfo = styled.div`
         background-color: #4646ff;
         color: white;
         border-radius: 50px;
-        width: 600px;
-        min-height: 300px
+        width: 100%;
+        min-height: 300px;
     }
 
     .conteudo-card-piloto{
@@ -98,11 +98,14 @@ export const DivInfo = styled.div`
     }
 
     .nome-piloto{
-        font-size: 25px;
+        font-size: 2rem;
     }
 
     .pilotos{
         display: flex;
+    }
+
+    .img-piloto{
     }
 
 `
