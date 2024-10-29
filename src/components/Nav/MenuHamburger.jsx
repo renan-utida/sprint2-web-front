@@ -36,14 +36,8 @@ const MenuHamburger=()=>{
                     <li><Link to="/" onClick={closeMenu}>Página Principal</Link></li>
                     <li><Link to="/formulae" onClick={closeMenu}>Fórmula E</Link></li>
                     <li><Link to="/proximas-corridas" onClick={closeMenu}>Próximas Corridas</Link></li>
-                    <li><Link to="/noticia-tecnologia" onClick={closeMenu}>Notícia Tecnologia</Link></li>
-                    <li><Link to="/noticia-corrida" onClick={closeMenu}>Notícia Corrida</Link></li>
-                    <li><Link to="/noticia-eventos" onClick={closeMenu}>Noticia Eventos</Link></li>
-                    <li><Link to="/noticia-sustentabilidade" onClick={closeMenu}>Notícia Sustentabilidade</Link></li>
-                    <li><Link to="/noticia-pesquisa" onClick={closeMenu}>Notícia Pesquisa</Link></li>
                     <li><Link to="/login" onClick={closeMenu}>Quiz</Link></li>
                     <li><Link to="/login" onClick={closeMenu}>Login</Link></li>
-                    <li><Link to='/mais-informacoes' onClick={closeMenu}>Mais Informações</Link></li>
                 </ul>
             </nav>
         </MenuCabecalho>
