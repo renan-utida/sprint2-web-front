@@ -1,6 +1,19 @@
 import styled from "styled-components";
 import HeaderBackground from "../../assets/images/header-background.png";
 
+import { FaHome } from "react-icons/fa";
+import { FaTrophy } from "react-icons/fa";
+import { FaFlagCheckered } from "react-icons/fa6";
+import { FaNewspaper } from "react-icons/fa6";
+import { FaAngleRight } from "react-icons/fa6";
+import { FaGamepad } from "react-icons/fa";
+import { MdLogin } from "react-icons/md";
+import { FaConnectdevelop } from "react-icons/fa6";
+import { FaBolt } from "react-icons/fa6";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { FaRecycle } from "react-icons/fa6";
+import { FaSearch } from "react-icons/fa";
+
 export const HeaderCabecalho = styled.header`
     height: 75px;
     position: fixed;
@@ -238,7 +251,7 @@ export const MenuCabecalho = styled.div`
 
     #menu li a{
         padding: 1.4rem 1rem;
-        display: block;
+        display: flex;
         margin: 0.2rem 0.3rem;
         color: white;
         text-decoration: none;
@@ -247,6 +260,39 @@ export const MenuCabecalho = styled.div`
 
     li a:hover{
         background-color: rgba(255, 255, 255, 0.421);
+    }
+
+    #menu li a p{
+        margin-bottom: 2px;
+    }
+
+    .sub-btn {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .sub-menu {
+        display: none; /* Oculta o submenu inicialmente */
+        list-style: none;
+        padding-left: 1.5rem;
+        background-color: #303230;
+    }
+
+    .sub-menu.active {
+        display: block; /* Mostra o submenu quando ativo */
+    }
+
+    .sub-menu li a {
+        color: white;
+        text-decoration: none;
+        padding: 0.8rem;
+        display: block;
+        transition: background-color 0.5s;
+    }
+
+    .sub-menu li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
     }
 
     @media screen and (max-width: 1000px){
@@ -336,7 +382,96 @@ export const MenuCabecalho = styled.div`
             padding: 1.05rem 0.7rem;
         }
     }
-    `
+`
+
+// Para cada ícone, crie uma versão estilizada
+export const HomeIcon = styled(FaHome)`
+    width: 1.4rem;   // Tamanho base do ícone
+    height: 1.4rem;
+    margin-right: 0.8rem;
+    color: #ffffff;      // Cor base do ícone
+`;
+
+export const FormulaIcon = styled(FaTrophy)`
+    width: 1.4rem;   // Tamanho base do ícone
+    height: 1.4rem;
+    margin-right: 0.8rem;
+    color: #ffffff;      // Cor base do ícone
+`;
+
+export const RaceIcon = styled(FaFlagCheckered)`
+    width: 1.4rem;   // Tamanho base do ícone
+    height: 1.4rem;
+    margin-right: 0.8rem;
+    color: #ffffff;      // Cor base do ícone
+`;
+
+export const NewsIcon = styled(FaNewspaper)`
+    width: 1.4rem;   // Tamanho base do ícone
+    height: 1.4rem;
+    margin-right: 0.8rem;
+    color: #ffffff;      // Cor base do ícone
+`;
+
+export const AngleIcon = styled(FaAngleRight)`
+    position: absolute;
+    right: 1rem; /* Alinha o ícone ao canto direito */
+    width: 1.4rem;   // Tamanho base do ícone
+    height: 1.4rem;
+    color: #ffffff;      // Cor base do ícone
+    transition: 0.3s ease;
+`;
+
+export const QuizIcon = styled(FaGamepad)`
+    width: 1.4rem;   // Tamanho base do ícone
+    height: 1.4rem;
+    margin-right: 0.8rem;
+    color: #ffffff;      // Cor base do ícone
+`;
+
+export const LoginIcon = styled(MdLogin)`
+    width: 1.4rem;   // Tamanho base do ícone
+    height: 1.4rem;
+    margin-right: 0.8rem;
+    color: #ffffff;      // Cor base do ícone
+`;
+
+export const TecnologiaIcon = styled(FaConnectdevelop)`
+    width: 1.1rem;   // Tamanho base do ícone
+    height: 1.1rem;
+    margin-right: 0.8rem;
+    color: #ffffff;      // Cor base do ícone
+`;
+
+export const CorridaIcon = styled(FaBolt)`
+    width: 1.1rem;   // Tamanho base do ícone
+    height: 1.1rem;
+    margin-right: 0.8rem;
+    color: #ffffff;      // Cor base do ícone
+`;
+
+export const EventosIcon = styled(FaPeopleGroup)`
+    width: 1.1rem;   // Tamanho base do ícone
+    height: 1.1rem;
+    margin-right: 0.8rem;
+    color: #ffffff;      // Cor base do ícone
+`;
+
+export const SustentabilidadeIcon = styled(FaRecycle)`
+    width: 1.1rem;   // Tamanho base do ícone
+    height: 1.1rem;
+    margin-right: 0.8rem;
+    color: #ffffff;      // Cor base do ícone
+`;
+
+export const PesquisaIcon = styled(FaSearch)`
+    width: 1.1rem;   // Tamanho base do ícone
+    height: 1.1rem;
+    margin-right: 0.8rem;
+    color: #ffffff;      // Cor base do ícone
+`;
+
+
 
 
 
