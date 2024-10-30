@@ -44,21 +44,22 @@ export const DivCabecalho = styled.div`
     
     .login-btn{
         display: block;
-        padding: 9px 12px;
+        padding: 10px 13px;
         margin-left: 15px;
-        border: 1px solid white;
         border-radius: 12px;
+        border: none;
         background-color: transparent;
         color: white;
-        font-size: 1.2rem;
+        background-color: #0404fb;
+        font-size: 1.1rem;
         font-weight: bold;
         text-decoration: none;
-        transition: 0.8s ease;
+        cursor: pointer;
+        transition: background-color 0.6s ease;
     }
     
     .login-btn:hover{
-        color: #0404fb;
-        border: 1px solid #0404fb;
+        background-color: #0606a6;
     }
     
     @media screen and (max-width: 1000px){
@@ -211,6 +212,22 @@ export const MenuCabecalho = styled.div`
         height: 0px;
         visibility: hidden;
         overflow-y: hidden;
+
+         /* Estilização do scrollbar para o menu hamburguer */
+        &::-webkit-scrollbar {
+        width: 0.4rem;
+        }
+
+        &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #000;
+        box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+        }
+
+        &::-webkit-scrollbar-thumb {
+        background-color: #616162;
+        border-radius: 10px;
+        }
     }
 
     #nav.active #menu{

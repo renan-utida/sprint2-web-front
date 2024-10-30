@@ -52,7 +52,7 @@ const NovoUsuario =()=>{
             return;
         }
 
-        fetch(`http://localhost:5002/usuarios/${id ? id :''}`,{
+        fetch(`http://localhost:5003/usuarios/${id ? id :''}`,{
             method:metodo,
             headers: {
                 'Content-type':'application/json',
@@ -82,7 +82,7 @@ const NovoUsuario =()=>{
     //Hook- useEffect - realiza o efeito colateral ele carrega os usuarios cadastrados
     useEffect(()=>{
         if(id){
-            fetch(`http://localhost:5002/usuarios/${id}`)
+            fetch(`http://localhost:5003/usuarios/${id}`)
                 .then((resp)=>{
                     return resp.json();
                 })
