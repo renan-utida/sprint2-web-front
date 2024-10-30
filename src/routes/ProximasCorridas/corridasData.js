@@ -1,6 +1,13 @@
 import SaoPauloImage from '../../assets/images/sambodromo.png'; 
 import MexicoImage from '../../assets/images/mexico-city.png'; 
 import JeddahImage from '../../assets/images/jeddah.png';
+import MiamiImage from '../../assets/images/miami.png';
+import MonacoImage from '../../assets/images/monaco.png';
+import TokyoImage from '../../assets/images/tokyo.png';
+import ShanghaiImage from '../../assets/images/shanghai.png';
+import JakartaImage from '../../assets/images/jakarta.png';
+import BerlimImage from '../../assets/images/berlim.png';
+import LondresImage from '../../assets/images/londres.png';
 
 import BandeiraBrasil from '../../assets/images/bandeira-brasil.png';
 import BandeiraMexico from '../../assets/images/bandeira-mexico.png';
@@ -67,7 +74,7 @@ const corridasData = [
     temperature: "23°C",
     humidity: "70%",
     countryFlag: BandeiraEstadosUnidos,
-    trackImage: JeddahImage
+    trackImage: MiamiImage
   },
   {
     round: "ROUND 6",
@@ -78,7 +85,7 @@ const corridasData = [
     temperature: "20°C",
     humidity: "56%",
     countryFlag: BandeiraMonaco,
-    trackImage: JeddahImage
+    trackImage: MonacoImage
   },
   {
     round: "ROUND 7",
@@ -89,7 +96,7 @@ const corridasData = [
     temperature: "20°C",
     humidity: "56%",
     countryFlag: BandeiraMonaco,
-    trackImage: JeddahImage
+    trackImage: MonacoImage
   },
   {
     round: "ROUND 8",
@@ -100,7 +107,7 @@ const corridasData = [
     temperature: "10°C",
     humidity: "78%",
     countryFlag: BandeiraJapao,
-    trackImage: JeddahImage
+    trackImage: TokyoImage
   },
   {
     round: "ROUND 9",
@@ -111,7 +118,7 @@ const corridasData = [
     temperature: "10°C",
     humidity: "78%",
     countryFlag: BandeiraJapao,
-    trackImage: JeddahImage
+    trackImage: TokyoImage
   },
   {
     round: "ROUND 10",
@@ -122,7 +129,7 @@ const corridasData = [
     temperature: "14°C",
     humidity: "36%",
     countryFlag: BandeiraChina,
-    trackImage: JeddahImage
+    trackImage: ShanghaiImage
   },
   {
     round: "ROUND 11",
@@ -130,10 +137,10 @@ const corridasData = [
     location: "SHANGHAI",
     country: "CHINA",
     raceName: "HANKOOK SHANGHAI E-PRIX",
-    temperature: "28°C",
-    humidity: "40%",
+    temperature: "14°C",
+    humidity: "36%",
     countryFlag: BandeiraChina,
-    trackImage: JeddahImage
+    trackImage: ShanghaiImage
   },
   {
     round: "ROUND 12",
@@ -144,7 +151,7 @@ const corridasData = [
     temperature: "18°C",
     humidity: "75%",
     countryFlag: BandeiraIndonesia,
-    trackImage: JeddahImage
+    trackImage: JakartaImage
   },
   {
     round: "ROUND 13",
@@ -155,7 +162,7 @@ const corridasData = [
     temperature: "8°C",
     humidity: "47%",
     countryFlag: BandeiraAlemanha,
-    trackImage: JeddahImage
+    trackImage: BerlimImage
   },
   {
     round: "ROUND 14",
@@ -163,10 +170,10 @@ const corridasData = [
     location: "BERLIM",
     country: "ALEMANHA",
     raceName: "HANKOOK BERLIM E-PRIX",
-    temperature: "28°C",
-    humidity: "40%",
+    temperature: "8°C",
+    humidity: "47%",
     countryFlag: BandeiraAlemanha,
-    trackImage: JeddahImage
+    trackImage: BerlimImage
   },
   {
     round: "ROUND 15",
@@ -177,7 +184,7 @@ const corridasData = [
     temperature: "13°C",
     humidity: "48%",
     countryFlag: BandeiraReinoUnido,
-    trackImage: JeddahImage
+    trackImage: LondresImage
   },
   {
     round: "ROUND 16",
@@ -188,7 +195,7 @@ const corridasData = [
     temperature: "13°C",
     humidity: "48%",
     countryFlag: BandeiraReinoUnido,
-    trackImage: JeddahImage
+    trackImage: LondresImage
   },
 ];
 

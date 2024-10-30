@@ -44,7 +44,7 @@ export const DivLugar = styled.div`
     }
 
     .img-lugar{
-        max-width: 300px;
+        width: 300px;
         height: 190px;
         object-fit: cover;
         margin: 0 auto;
