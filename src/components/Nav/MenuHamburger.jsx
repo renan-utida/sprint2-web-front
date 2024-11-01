@@ -1,15 +1,17 @@
 import { AngleIcon, CorridaIcon, EventosIcon, FormulaIcon, HomeIcon, LoginIcon, MenuCabecalho, NewsIcon, PesquisaIcon, QuizIcon, RaceIcon, SustentabilidadeIcon, TecnologiaIcon } from "./nav-styled";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { useState } from "react";
 
-const MenuHamburger=()=>{
+const MenuHamburger=({isAuthenticated, handleLogout})=>{
 
     // Estado para controlar se o menu está ativo ou não
     const [menuActive, setMenuActive] = useState(false);
 
     // Controle do submenu
     const [subMenuActive, setSubMenuActive] = useState(false); 
+
+    const navigate = useNavigate();
     
     // Função para alternar o estado do menu
     const toggleMenu = (event) => {
@@ -30,8 +32,10 @@ const MenuHamburger=()=>{
     const handleQuizNavigation = () => {
         if (isAuthenticated) {
             navigate("/quiz");
+            closeMenu();
         } else {
             navigate("/login");
+            closeMenu();
         }
     };
 
@@ -58,8 +62,12 @@ const MenuHamburger=()=>{
                             <li><Link to="/noticia-pesquisa" onClick={closeMenu} className="sub-item"><PesquisaIcon/>Pesquisa</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="/login" onClick={closeMenu}><QuizIcon /><p>Quiz</p></Link></li>
-                    <li><Link to="/login" onClick={closeMenu}><LoginIcon /><p>Login</p></Link></li>
+                    <li><a onClick={handleQuizNavigation}><QuizIcon /><p>Quiz</p></a></li>
+                    {isAuthenticated ? ( 
+                        <li><a onClick={() => {handleLogout(); closeMenu();}}><LoginIcon /><p>Sair</p></a></li>
+                    ) : ( 
+                        <li><Link to="/login" onClick={closeMenu}><LoginIcon /><p>Login</p></Link></li> 
+                    )}
                 </ul>
             </nav>
         </MenuCabecalho>

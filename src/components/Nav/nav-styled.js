@@ -158,11 +158,6 @@ export const DivCabecalho = styled.div`
             font-size: 0.85rem;
             padding: 8px 8px;
         }
-        
-        .login-btn:hover{
-            color: #9886E7;
-            border: 1px solid #9886E7;
-        }
     }
     `
 
@@ -256,6 +251,7 @@ export const MenuCabecalho = styled.div`
         color: white;
         text-decoration: none;
         border-top: 2px solid rgba(136, 136, 136, 0.12);
+        cursor: pointer;
     }
 
     li a:hover{
@@ -381,6 +377,109 @@ export const MenuCabecalho = styled.div`
         #menu li a{
             padding: 1.05rem 0.7rem;
         }
+    }
+`
+
+export const DivLoginMenu = styled.div`
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 15px;
+    width: 200px;
+    min-height: 100px;
+    background-color: white;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1 );
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    &.dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: -8px;
+        right: 35px;
+        width: 20px;
+        height: 20px;
+        background: white;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        list-style: none;
+    }
+
+    ul li{
+        padding: 15px 20px;
+        background-color: #fff;
+        transition: background-color 0.3s ease;
+    }
+
+    ul li:hover{
+        background-color: #f1f1f1;
+    }
+
+    ul li a{
+        text-decoration: none;
+        color: #666;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+`
+
+export const DivLoginUsename = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    user-select: none;
+
+    .username{
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+        font-weight: 500;
+        line-height: 1rem;
+    }
+
+    h3{
+        color: #555;
+    }
+
+    h3 span{
+        font-size: 0.75rem;
+        color: #777;
+    }
+
+    .imgCx{
+        position: relative;
+        width: 42px;
+        height: 42px;
+        background-color: blue;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .imgCx img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
     }
 `
 

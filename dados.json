@@ -3,7 +3,18 @@
     {
       "id": "d66d",
       "usuario": "pre",
+      "nome": "Predro",
+      "sobrenome": "Sobrenome",
+      "email": "exemplo@email.com",
       "senha": "123"
+    },
+    {
+      "id": "b6f2",
+      "usuario": "R3N4N",
+      "nome": "Renan",
+      "sobrenome": "Dias",
+      "email": "renan@email.com",
+      "senha": "123456"
     }
   ]
 }

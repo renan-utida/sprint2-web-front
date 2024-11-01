@@ -24,6 +24,7 @@ export const MainQuiz = styled.main`
     width: 100%;
     min-height: 100vh;
     color: white;
+    overflow-x: hidden;
     background: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.9)), 
     url(${QuizBackground}) no-repeat center / cover;
     
@@ -40,6 +41,7 @@ export const MainQuiz = styled.main`
     
     img{
         max-width: 100%;
+        cursor: pointer;
     }
     
     button{

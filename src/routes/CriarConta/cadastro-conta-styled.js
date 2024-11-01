@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import CriarContaBackground from "../../assets/images/criar-conta-background.jpg"
+import { MdEmail } from "react-icons/md";
 
 export const MainCriarConta = styled.main`
     margin-top: 75px;
@@ -247,3 +248,16 @@ export const SectionNovoUsuario = styled.section`
         }
     }        
 `
+
+// Para cada ícone, crie uma versão estilizada
+export const EmailIcon = styled(MdEmail)`
+    /* width: 1.4rem;   // Tamanho base do ícone
+    height: 1.4rem; */
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: #ffffff;      // Cor base do ícone
+`;

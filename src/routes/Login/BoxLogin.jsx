@@ -19,14 +19,11 @@ const BoxLogin = () => {
     const navigate = useNavigate();
 
     // Criando a função de validação
-    function validate(){
-        for(let i=0; i < setUsuarios.length; i++){
-            if(
-                usuarios[i].usuario == usuario.current.value &&
-                usuarios[i].senha == senha.current.value
-            )
-            return true
-        }
+    function validate() {
+        return usuarios.some(user => 
+            (user.usuario === usuario.current.value || user.email === usuario.current.value) &&
+            user.senha === senha.current.value
+        );
     };
 
     // Criando a função handleSubmit
@@ -43,7 +40,7 @@ const BoxLogin = () => {
                 sessionStorage.setItem("senha", token);
                 navigate("/quiz"); // Redireciona para o quiz
         }else{
-            alert("Usuário ou senha inválidos!");
+            alert("Usuário/Email ou senha inválidos!");
         }
     };
 
@@ -73,7 +70,7 @@ const BoxLogin = () => {
                 <div className="input-field">
                     <input 
                         type="text" 
-                        placeholder="Usuário"
+                        placeholder="Usuário ou Email"
                         required 
                         id="usuario"
                         ref={usuario}

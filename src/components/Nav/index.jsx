@@ -1,4 +1,5 @@
 import MenuHamburger from "./MenuHamburger";
+import LoginBtn from "./LoginBtn.jsx";
 import { HeaderCabecalho, DivCabecalho } from "./nav-styled";
 
 import { Link, useNavigate, useLocation } from "react-router-dom";
@@ -50,14 +51,17 @@ const Nav=()=>{
         <HeaderCabecalho>
             <DivCabecalho>
                 <div className="hamburger-search">
-                    <MenuHamburger/>
+                    <MenuHamburger
+                        isAuthenticated={isAuthenticated}
+                        handleLogout={handleLogout}
+                    />
                     <img src={PesquisaIcone} alt="Icone de Pesquisa" />
                 </div>
                 <Link href="/" className="logo">
-                    <img src={LogoFormulae} alt="" />
+                    <img src={LogoFormulae} alt="Logo formula e" />
                 </Link>
                 {isAuthenticated ? (
-                    <button onClick={handleLogout} className="login-btn">Sair</button>
+                    <LoginBtn handleLogout={handleLogout}/>
                 ) : (
                     <Link to="/login" className="login-btn">Entrar</Link>
                 )}

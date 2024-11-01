@@ -1,4 +1,4 @@
-import { SectionNovoUsuario } from "./cadastro-conta-styled"
+import { EmailIcon, SectionNovoUsuario } from "./cadastro-conta-styled"
 
 import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
@@ -9,13 +9,16 @@ import IconSenha from "../../assets/images/icons8-trancar.png";
 const NovoUsuario =()=>{
 
     //Hook- useParams- serve para receber da rota ou gerar o codigo
-    let {id} =useParams();
+    let {id} = useParams();
 
     //Hook - useState - Manipula o estado da variavel
     const [usuarios,setUsuarios]= useState({
         id,
-        usuario:'',
-        senha:''
+        usuario: '',
+        nome: '',
+        sobrenome: '',
+        email: '',
+        senha: ''
     });
 
     const [confirmarSenha, setConfirmarSenha] = useState(''); // Estado para confirmação da senha
@@ -99,6 +102,28 @@ const NovoUsuario =()=>{
                 <div className="input-field">
                     <input 
                         type="text" 
+                        name="nome"
+                        value={usuarios.nome}
+                        placeholder="Nome"
+                        required 
+                        /* o onChange é utili em situações que é necessários reagir a cada alteração do input */
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="input-field">
+                    <input 
+                        type="text" 
+                        name="sobrenome"
+                        value={usuarios.sobrenome}
+                        placeholder="Sobrenome"
+                        required 
+                        /* o onChange é utili em situações que é necessários reagir a cada alteração do input */
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="input-field">
+                    <input 
+                        type="text" 
                         name="usuario"
                         value={usuarios.usuario}
                         placeholder="Usuário"
@@ -107,6 +132,18 @@ const NovoUsuario =()=>{
                         onChange={handleChange}
                     />
                     <img src={IconUsuario} alt="Icone Usuario" />
+                </div>
+                <div className="input-field">
+                    <input 
+                        type="email" 
+                        name="email"
+                        value={usuarios.email}
+                        placeholder="Email"
+                        required 
+                        /* o onChange é utili em situações que é necessários reagir a cada alteração do input */
+                        onChange={handleChange}
+                    />
+                    <EmailIcon />
                 </div>
                 <div className="input-field">
                     <input 
