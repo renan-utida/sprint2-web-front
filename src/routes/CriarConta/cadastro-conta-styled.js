@@ -251,8 +251,6 @@ export const SectionNovoUsuario = styled.section`
 
 // Para cada ícone, crie uma versão estilizada
 export const EmailIcon = styled(MdEmail)`
-    /* width: 1.4rem;   // Tamanho base do ícone
-    height: 1.4rem; */
     position: absolute;
     right: 25px;
     top: 50%;
@@ -261,3 +259,4 @@ export const EmailIcon = styled(MdEmail)`
     height: 20px;
     color: #ffffff;      // Cor base do ícone
 `;
+

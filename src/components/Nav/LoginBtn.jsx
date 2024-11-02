@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import { DivLoginMenu, DivLoginUsename } from "./nav-styled"
 import UsuarioImg from "./../../assets/images/usuario-login.png"
@@ -49,9 +50,7 @@ const LoginBtn = ({handleLogout}) => {
             <DivLoginMenu className={isDropdownOpen ? "dropdown" :""}>
                 <ul>
                     <li><a href="">Perfil</a></li>
-                    <li><a href="">Cx de Entrada</a></li>
-                    <li><a href="">Configuracoes</a></li>
-                    <li><a href="">Ajuda</a></li>
+                    <li><Link to="/editar-conta">Editar Conta</Link></li>
                     <li><a onClick={handleLogout}>Sair da Conta</a></li>
                 </ul>
             </DivLoginMenu>

@@ -70,8 +70,8 @@ const NovoUsuario =()=>{
             return response.json();
           })
           .then((data) => {
-            // Salva os dados do usuário no localStorage para manter o estado de autenticação
-            sessionStorage.setItem('usuario', JSON.stringify(data));
+            // Salva apenas o nome do usuário ou e-mail no sessionStorage
+            sessionStorage.setItem("usuario", usuarios.usuario);
             
             // Redireciona para a página de cadastrar produto
             navigate("/quiz");

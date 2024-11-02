@@ -15,6 +15,38 @@
       "sobrenome": "Dias",
       "email": "renan@email.com",
       "senha": "123456"
+    },
+    {
+      "id": "5db6",
+      "usuario": "Jorge o foda",
+      "nome": "Jorge",
+      "sobrenome": "Dias",
+      "email": "jorge@email.com",
+      "senha": "123"
+    },
+    {
+      "id": "ea75",
+      "usuario": "Cesar o grande",
+      "nome": "Antonio",
+      "sobrenome": "Cesar",
+      "email": "cezar@cezar",
+      "senha": "123"
+    },
+    {
+      "id": "2ab2",
+      "usuario": "idiota",
+      "nome": "Igor",
+      "sobrenome": "Bundao",
+      "email": "igor@bundao",
+      "senha": "idiota"
+    },
+    {
+      "id": "97af",
+      "usuario": "Craque",
+      "nome": "Renan",
+      "sobrenome": "Foda",
+      "email": "renan@craque",
+      "senha": "123456"
     }
   ]
 }

@@ -38,6 +38,7 @@ const BoxLogin = () => {
                 Math.random().toString(16).substring(2)
                 sessionStorage.setItem("usuario", usuario.current.value);
                 sessionStorage.setItem("senha", token);
+                
                 navigate("/quiz"); // Redireciona para o quiz
         }else{
             alert("Usuário/Email ou senha inválidos!");

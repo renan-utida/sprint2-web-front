@@ -9,11 +9,11 @@ function App() {
 
   return (
     <>
-      <Nav/>
-      <QuizProvider>
-        <Outlet/>
-      </QuizProvider>
-      <Footer/>
+        <Nav/>
+        <QuizProvider>
+            <Outlet/>
+        </QuizProvider>
+        <Footer/>
     </>
   )
 }
