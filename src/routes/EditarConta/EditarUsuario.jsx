@@ -65,6 +65,14 @@ const EditarUsuario = () => {
                 .then(response => response.json())
                 .then(updatedData => {
                     setUsuarioDados(updatedData); // Atualiza os dados localmente
+
+                    // Atualiza o sessionStorage após a alteração
+                    sessionStorage.setItem("usuario", updatedData.usuario);  // Assumindo que o campo 'usuario' identifica o usuário
+
+                    // Atualiza o nome e o email do usuário no sessionStorage
+                    sessionStorage.setItem("nome", updatedData.nome);
+                    sessionStorage.setItem("email", updatedData.email);
+                    
                     alert(`${campoParaEditar.charAt(0).toUpperCase() + campoParaEditar.slice(1)} alterado com sucesso!`);
                     fecharModal();
                 })
@@ -144,7 +152,7 @@ const EditarUsuario = () => {
                     <label>{campoParaEditar.charAt(0).toUpperCase() + campoParaEditar.slice(1).toLowerCase()} atual:</label>
                     <div style={{position: "relative"}}>
                         <input 
-                            type={mostrarSenhaAtual ? "text" : "password"}
+                            type={campoParaEditar === "senha" && !mostrarSenhaAtual ? "password" : "text"}
                             placeholder={`Digite ${campoParaEditar} atual`} 
                             value={dadoAtual} 
                             onChange={(e) => setDadoAtual(e.target.value)} 
@@ -160,7 +168,7 @@ const EditarUsuario = () => {
                     <label>Novo {campoParaEditar.charAt(0).toUpperCase() + campoParaEditar.slice(1).toLowerCase()}:</label>
                     <div style={{position: "relative"}}>
                         <input 
-                            type={mostrarNovaSenha ? "text" : "password"}
+                            type={campoParaEditar === "senha" && !mostrarNovaSenha ? "password" : "text"}
                             placeholder={`Novo ${campoParaEditar}`} 
                             value={novoDado} 
                             onChange={(e) => setNovoDado(e.target.value)} 

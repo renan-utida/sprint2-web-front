@@ -1,4 +1,4 @@
-import { AngleIcon, CorridaIcon, EventosIcon, FormulaIcon, HomeIcon, LoginIcon, MenuCabecalho, NewsIcon, PesquisaIcon, QuizIcon, RaceIcon, SustentabilidadeIcon, TecnologiaIcon } from "./nav-styled";
+import { AngleIcon, CorridaIcon, EventosIcon, FormulaIcon, HomeIcon, LoginIcon, LogoutIcon, MenuCabecalho, NewsIcon, PesquisaIcon, QuizIcon, RaceIcon, SustentabilidadeIcon, TecnologiaIcon } from "./nav-styled";
 import { Link, useNavigate } from "react-router-dom";
 
 import { useState } from "react";
@@ -64,7 +64,7 @@ const MenuHamburger=({isAuthenticated, handleLogout})=>{
                     </li>
                     <li><a onClick={handleQuizNavigation}><QuizIcon /><p>Quiz</p></a></li>
                     {isAuthenticated ? ( 
-                        <li><a onClick={() => {handleLogout(); closeMenu();}}><LoginIcon /><p>Sair</p></a></li>
+                        <li><a onClick={() => {handleLogout(); closeMenu();}}><LogoutIcon /><p>Sair</p></a></li>
                     ) : ( 
                         <li><Link to="/login" onClick={closeMenu}><LoginIcon /><p>Login</p></Link></li> 
                     )}

@@ -8,6 +8,10 @@ import { FaNewspaper } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
 import { FaGamepad } from "react-icons/fa";
 import { MdLogin } from "react-icons/md";
+import { FaRegEdit } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+import { MdLogout } from "react-icons/md";
+import { FaPowerOff } from "react-icons/fa6";
 import { FaConnectdevelop } from "react-icons/fa6";
 import { FaBolt } from "react-icons/fa6";
 import { FaPeopleGroup } from "react-icons/fa6";
@@ -384,10 +388,10 @@ export const DivLoginMenu = styled.div`
     position: absolute;
     top: calc(100% + 5px);
     right: 15px;
-    width: 200px;
+    width: 175px;
     min-height: 100px;
     background-color: white;
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1 );
+    box-shadow: 2px 2px 35px rgba(0, 0, 0, 0.5 ), -2px -2px 35px rgba(0, 0, 0, 0.5 );
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
@@ -398,7 +402,7 @@ export const DivLoginMenu = styled.div`
         visibility: visible;
         transform: translateY(0);
     }
-
+    
     &::before{
         content: '';
         position: absolute;
@@ -421,31 +425,41 @@ export const DivLoginMenu = styled.div`
     ul li{
         padding: 15px 20px;
         background-color: #fff;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.15s ease;
     }
 
     ul li:hover{
-        background-color: #f1f1f1;
+        background-color: #e0e0e0;
     }
 
     ul li a{
         text-decoration: none;
-        color: #666;
+        color: black;
         display: flex;
         align-items: center;
         gap: 10px;
         cursor: pointer;
+        font: 0.9rem;
+    }
+
+    ul .sair-conta{
+        border-top: 1px solid gray;
+        font-weight: bold;
+        display: flex;
+    }
+
+    ul .sair-conta a{
+        color: #dc0000;
     }
 `
 
-export const DivLoginUsename = styled.div`
+export const DivLoginUsername = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
     margin-right: 10px;
     cursor: pointer;
-    user-select: none;
 
     .username{
         display: flex;
@@ -455,13 +469,29 @@ export const DivLoginUsename = styled.div`
         line-height: 1rem;
     }
 
-    h3{
-        color: #555;
+    .username .boasvindas-login{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 5px 0 7px 0;
+        gap: 5px;
     }
 
-    h3 span{
+    .boasvindas-login h3{
+        color: white;
+        font-size: 1.1rem;
+    }
+
+    .boasvindas-login .nome-login{
+        color: blue;
+        font-size: 1.3rem;
+    }
+
+    span{
         font-size: 0.75rem;
-        color: #777;
+        color: #fff;
+        font-style: italic;
     }
 
     .imgCx{
@@ -533,6 +563,37 @@ export const LoginIcon = styled(MdLogin)`
     height: 1.4rem;
     margin-right: 0.8rem;
     color: #ffffff;      // Cor base do ícone
+`;
+
+export const LogoutIcon = styled(MdLogout)`
+    width: 1.4rem;   // Tamanho base do ícone
+    height: 1.4rem;
+    margin-right: 0.8rem;
+    color: #ffffff;      // Cor base do ícone
+`;
+
+export const PowerOffIcon = styled(FaPowerOff)`
+    width: 1.15rem;   // Tamanho base do ícone
+    height: 1.15rem;
+    margin-right: 0.3rem;
+    margin-top: 0.1rem;
+    color: #dc0000;      // Cor base do ícone
+`;
+
+export const EditIcon = styled(FaRegEdit)`
+    width: 1.15rem;   // Tamanho base do ícone
+    height: 1.15rem;
+    margin-right: 0.3rem;
+    margin-top: 0.1rem;
+    color: #000;      // Cor base do ícone
+`;
+
+export const ProfileIcon = styled(FaUser)`
+    width: 1.15rem;   // Tamanho base do ícone
+    height: 1.15rem;
+    margin-right: 0.3rem;
+    margin-top: 0.1rem;
+    color: #000;      // Cor base do ícone
 `;
 
 export const TecnologiaIcon = styled(FaConnectdevelop)`
