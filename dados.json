@@ -25,28 +25,12 @@
       "senha": "123"
     },
     {
-      "id": "ea75",
-      "usuario": "Cesar o grande",
-      "nome": "Antonio",
-      "sobrenome": "Cesar",
-      "email": "cezar@cezar",
-      "senha": "123"
-    },
-    {
-      "id": "2ab2",
-      "usuario": "idiota",
+      "id": "44f7",
+      "usuario": "Igao",
       "nome": "Igor",
-      "sobrenome": "Bundao",
-      "email": "igor@bundao",
-      "senha": "idiota"
-    },
-    {
-      "id": "97af",
-      "usuario": "Craque",
-      "nome": "Renan",
-      "sobrenome": "Foda",
-      "email": "renan@craque",
-      "senha": "123456"
+      "sobrenome": "Cesar",
+      "email": "igor@email.com",
+      "senha": "123456789"
     }
   ]
 }
