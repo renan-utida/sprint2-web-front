@@ -14,7 +14,7 @@ export const MainEditarConta = styled.main`
     justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url(${EditarContaBackground}) no-repeat center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(${EditarContaBackground}) no-repeat center / cover;
 
     h1{
         color: white;
@@ -76,8 +76,7 @@ export const EditarIcon = styled(FaRegEdit)`
 export const OcultoIcon = styled(FaEyeSlash)`
     position: absolute;
     right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 17px;
     width: 23px;
     height: 23px;
     color: #3f3fff;      // Cor base do ícone
@@ -92,8 +91,7 @@ export const OcultoIcon = styled(FaEyeSlash)`
 export const VisivelIcon = styled(FaEye)`
     position: absolute;
     right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 17px;
     width: 23px;
     height: 23px;
     color: #3f3fff;      // Cor base do ícone

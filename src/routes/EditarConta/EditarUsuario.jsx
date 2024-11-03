@@ -12,6 +12,11 @@ const EditarUsuario = () => {
     const [mostrarSenhaAtual, setMostrarSenhaAtual] = useState(false); // Controle da visibilidade da senha
     const [mostrarNovaSenha, setMostrarNovaSenha] = useState(false);
     const [mostrarConfirmacaoSenha, setMostrarConfirmacaoSenha] = useState(false);
+    const [emailValido, setEmailValido] = useState(true);
+    const [nomeValido, setNomeValido] = useState(true);
+    const [sobrenomeValido, setSobrenomeValido] = useState(true);
+    const [senhaValida, setSenhaValida] = useState(false);
+    const [senhaConfirmada, setSenhaConfirmada] = useState(true);
 
     useEffect(() => {
         const usuarioLogado = sessionStorage.getItem("usuario");
@@ -46,7 +51,64 @@ const EditarUsuario = () => {
         setModalEdicao(true);
     };
 
+    const capitalizeWords = (str) => {
+        return str.replace(/\b\w/g, (char) => char.toUpperCase());
+    };
+
+    const handleNovoDadoChange = (e) => {
+        const value = e.target.value;
+        setNovoDado(value);
+
+        // Validação da senha com os critérios especificados
+        const isSenhaValida = value.length >= 8 && /[A-Z]/.test(value) && /\d/.test(value);
+        setSenhaValida(isSenhaValida);
+
+        if (campoParaEditar === "email") {
+            setEmailValido(value.includes("@"));
+        } else if (campoParaEditar === "nome") {
+            const isValid = /^[A-Za-zÀ-ÿ\s]+$/.test(value); // Verifica se contém apenas letras e espaços
+            setNomeValido(isValid);
+            if (isValid) {
+                setNovoDado(capitalizeWords(value));
+            }
+        } else if (campoParaEditar === "sobrenome") {
+            const isValid = /^[A-Za-zÀ-ÿ\s]+$/.test(value); // Verifica se contém apenas letras e espaços
+            setSobrenomeValido(isValid);
+            if (isValid) {
+                setNovoDado(capitalizeWords(value));
+            }
+        }
+    };
+
+    const handleConfirmarNovoDadoChange = (e) => {
+        const value = e.target.value;
+        setConfirmarNovoDado(value);
+
+        // Verificação se a confirmação da senha é igual à nova senha
+        setSenhaConfirmada(value === novoDado);
+    };
+
     const handleEditar = () => {
+        if (campoParaEditar === "email" && !emailValido) {
+            alert("O email deve conter o caractere '@'. Tente novamente!");
+            return;
+        }
+
+        if (campoParaEditar === "nome" && !nomeValido) {
+            alert("O nome deve conter apenas letras. Tente novamente!");
+            return;
+        }
+
+        if (campoParaEditar === "sobrenome" && !sobrenomeValido) {
+            alert("O sobrenome deve conter apenas letras. Tente novamente!");
+            return;
+        }
+
+        if (campoParaEditar === "senha" && (!senhaValida || !senhaConfirmada)) {
+            alert("A senha deve atender aos requisitos ou a confirmação da senha não coincide. Tente novamente!");
+            return;
+        }
+
         if (dadoAtual === usuarioDados[campoParaEditar]) {
             
             if (campoParaEditar === "senha" && novoDado !== confirmarNovoDado) {
@@ -171,8 +233,30 @@ const EditarUsuario = () => {
                             type={campoParaEditar === "senha" && !mostrarNovaSenha ? "password" : "text"}
                             placeholder={`Novo ${campoParaEditar}`} 
                             value={novoDado} 
-                            onChange={(e) => setNovoDado(e.target.value)} 
+                            onChange={handleNovoDadoChange}  
                         />
+                        {/* Regras*/}
+                        {campoParaEditar === "nome" && !nomeValido && (
+                            <span style={{ color: "red", fontSize: "0.9rem", marginTop: "5px", display: "block" }}>
+                                O nome deve conter apenas letras.
+                            </span>
+                        )}
+                        {campoParaEditar === "sobrenome" && !sobrenomeValido && (
+                            <span style={{ color: "red", fontSize: "0.9rem", marginTop: "5px", display: "block" }}>
+                                O sobrenome deve conter apenas letras.
+                            </span>
+                        )}
+                        {campoParaEditar === "email" && !emailValido && (
+                            <span style={{ color: "red", fontSize: "0.9rem", marginTop: "5px", display: "block" }}>
+                                O email deve conter "@"
+                            </span>
+                        )}
+                        {campoParaEditar === "senha" && !senhaValida && (
+                            <span style={{ color: "red", fontSize: "0.9rem", marginTop: "5px", display: "block" }}>
+                                A senha deve ter pelo menos 8 caracteres e deve conter uma letra maiúscula e um número.
+                            </span>
+                        )}
+
                         {campoParaEditar === "senha" && (
                             mostrarNovaSenha ? (
                                 <VisivelIcon onClick={() => setMostrarNovaSenha(false)} />
@@ -181,6 +265,7 @@ const EditarUsuario = () => {
                             )
                         )}
                     </div>
+
                     {campoParaEditar === "senha" && (
                         <>
                             <label>Confirmar nova senha:</label>
@@ -189,8 +274,14 @@ const EditarUsuario = () => {
                                     type={mostrarConfirmacaoSenha ? "text" : "password"}
                                     placeholder="Confirme a nova senha"
                                     value={confirmarNovoDado}
-                                    onChange={(e) => setConfirmarNovoDado(e.target.value)}
+                                    onChange={handleConfirmarNovoDadoChange}
                                 />
+                                {/* Feedback de confirmação de senha */}
+                                {!senhaConfirmada && (
+                                    <span style={{ color: "red", fontSize: "0.9rem", marginTop: "5px", display: "block" }}>
+                                        As senhas não coincidem.
+                                    </span>
+                                )}
                                 {mostrarConfirmacaoSenha ? (
                                     <VisivelIcon onClick={() => setMostrarConfirmacaoSenha(false)} />
                                 ) : (
