@@ -501,6 +501,7 @@ export const DivLoginUsername = styled.div`
         background-color: blue;
         border-radius: 50%;
         overflow: hidden;
+        border: 3px solid blue;
     }
 
     .imgCx img{

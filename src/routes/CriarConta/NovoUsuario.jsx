@@ -1,7 +1,33 @@
-import { DivImgProfile, EmailIcon, OcultoIcon, PasswordIcon, SectionNovoUsuario, UserIcon, VisivelIcon } from "./cadastro-conta-styled"
+
+import { DivBotoesModal, DivImageModal, DivImgProfile, EmailIcon, FecharIcon, GaleriaIcon, ImageIcon, OcultoIcon, Overlay, PasswordIcon, SectionNovoUsuario, SelecionarAvatar, TirarFotoIcon, UserIcon, VisivelIcon } from "./cadastro-conta-styled"
 
 import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
+
+import UsuarioImg from "./../../assets/images/usuario-login.png"
+import UsuarioImg1 from "./../../assets/images/usuario-login1.png"
+import UsuarioImg2 from "./../../assets/images/usuario-login2.png"
+import UsuarioImg3 from "./../../assets/images/usuario-login3.png"
+import UsuarioImg4 from "./../../assets/images/usuario-login4.png"
+import UsuarioImg5 from "./../../assets/images/usuario-login5.png"
+import UsuarioImg6 from "./../../assets/images/usuario-login6.png"
+import UsuarioImg7 from "./../../assets/images/usuario-login7.png"
+import UsuarioImg8 from "./../../assets/images/usuario-login8.png"
+import UsuarioImg9 from "./../../assets/images/usuario-login9.png"
+
+// Criando um array com os avatares
+const avatares = [
+    UsuarioImg,
+    UsuarioImg1,
+    UsuarioImg2,
+    UsuarioImg3,
+    UsuarioImg4,
+    UsuarioImg5,
+    UsuarioImg6,
+    UsuarioImg7,
+    UsuarioImg8,
+    UsuarioImg9,
+];
 
 const NovoUsuario =()=>{
 
@@ -15,7 +41,8 @@ const NovoUsuario =()=>{
         nome: '',
         sobrenome: '',
         email: '',
-        senha: ''
+        senha: '',
+        avatar: UsuarioImg // Estado inicial da imagem de perfil
     });
 
     // Estados para confirmação de senha
@@ -156,6 +183,21 @@ const NovoUsuario =()=>{
         setModal(!modalprofile);
     };
 
+    // Estado para armazenar a imagem selecionada
+    const [selectedImage, setSelectedImage] = useState(UsuarioImg);
+
+    // Função para atualizar a imagem selecionada ao clicar em uma imagem de sugestão
+    const handleImageSelect = (imgSrc) => {
+        setSelectedImage(imgSrc);
+    };
+
+    // Função para salvar a imagem selecionada como avatar
+    const handleSaveImage = () => {
+        setUsuarios((prevUsuarios) => ({ ...prevUsuarios, avatar: selectedImage }));
+        alert("Imagem atualizada com sucesso!");
+        toggleModal(); // Fecha o modal após salvar
+    };
+
     // Desativa o scroll enquanto o modal estiver aberto
     useEffect(() => {
         if (modalprofile) {
@@ -171,136 +213,189 @@ const NovoUsuario =()=>{
     }, [modalprofile]);
 
     return(
-        <SectionNovoUsuario>
-            <form onSubmit={handleSubmit}>
-                <h1>Criar uma Conta</h1>
-                <DivImgProfile>
-                    <button 
-                        className="btn-modal"
-                        onClick={toggleModal}>
-                            Open
-                    </button>
+        <>
+            <SectionNovoUsuario>
+                <form onSubmit={handleSubmit}>
+                    <h1>Criar Conta</h1>
+                    <DivImgProfile>
+                        <div className="image-profile-box" onClick={toggleModal}>
+                            <img src={usuarios.avatar} alt="Icone de perfil do usuario" />
+                            <a className="trocar-imagem-link">
+                                <ImageIcon/><br />Trocar imagem
+                            </a>
+                        </div>
+                        <a className="img-modal-link" onClick={toggleModal}>
+                            Alterar Foto de Perfil
+                        </a>
+                    </DivImgProfile>
 
-                    {modalprofile && (
-                        <div className="modal">
-                            <div className="overlay" onClick={toggleModal}></div>
-                            <div className="modal-content">
-                                <h2>Hello Modal</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odio aliquid, ullam cupiditate illo nesciunt ea possimus praesentium obcaecati similique adipisci, expedita, autem fugit odit. Alias nihil ducimus atque id?</p>
-                                <button 
-                                    className="close-modal"
-                                    onClick={toggleModal}>
-                                        Close  
-                                </button>
+                    <div className="input-field">
+                        <input 
+                            type="text" 
+                            name="nome"
+                            value={usuarios.nome}
+                            onChange={handleNomeChange}
+                            placeholder="Nome"
+                            required 
+                            /* o onChange é utili em situações que é necessários reagir a cada alteração do input */
+                        />
+                        {/* Regras*/}
+                        {!nomeValido && (
+                            <span style={{ color: "red", fontSize: "0.9rem", marginTop: "1px", display: "block" }}>
+                                O nome deve conter apenas letras.
+                            </span>
+                        )}
+                    </div>
+                    <div className="input-field">
+                        <input 
+                            type="text" 
+                            name="sobrenome"
+                            value={usuarios.sobrenome}
+                            placeholder="Sobrenome"
+                            required 
+                            /* o onChange é utili em situações que é necessários reagir a cada alteração do input */
+                            onChange={handleSobrenomeChange}
+                        />
+                        {!sobrenomeValido && (
+                            <span style={{ color: "red", fontSize: "0.9rem", marginTop: "1px", display: "block" }}>
+                                O sobrenome deve conter apenas letras.
+                            </span>
+                        )}
+                    </div>
+                    <div className="input-field">
+                        <input 
+                            type="text" 
+                            name="usuario"
+                            value={usuarios.usuario}
+                            placeholder="Usuário"
+                            required 
+                            /* o onChange é utili em situações que é necessários reagir a cada alteração do input */
+                            onChange={handleChange}
+                        />
+                        <UserIcon/>
+                    </div>
+                    <div className="input-field">
+                        <input 
+                            type="email" 
+                            name="email"
+                            value={usuarios.email}
+                            placeholder="Email"
+                            required 
+                            /* o onChange é utili em situações que é necessários reagir a cada alteração do input */
+                            onChange={handleEmailChange}
+                        />
+                        <EmailIcon />
+                        {!emailValido && (
+                            <span style={{ color: "red", fontSize: "0.9rem", marginTop: "1px", display: "block" }}>
+                                O email deve conter "@"
+                            </span>
+                        )}
+                    </div>
+                    <div className="input-field">
+                        <input 
+                            type={mostrarSenha ? "text" : "password"}
+                            name="senha"
+                            value={usuarios.senha}
+                            placeholder="Senha"
+                            required
+                            /* o onChange é utili em situações que é necessários reagir a cada alteração do input */
+                            onChange={handleSenhaChange}
+                        />
+                        <span onClick={() => setMostrarSenha(!mostrarSenha)} >
+                            {mostrarSenha ? <VisivelIcon /> : <OcultoIcon />} {/* Ícone para mostrar/ocultar senha */}
+                        </span>
+                        <PasswordIcon/>
+                        {senhaValida === false && (
+                            <span style={{ color: "red", fontSize: "0.9rem", marginTop: "1px", display: "block" }}>
+                                Mínimo 8 caracteres, 1 letra maiúscula e 1 número.
+                            </span>
+                        )}
+                    </div>
+                    <div className="input-field">
+                        <input 
+                            type={mostrarConfirmarSenha ? "text" : "password"}
+                            name="confirmarSenha"
+                            value={confirmarSenha}
+                            placeholder="Confirme sua Senha"
+                            required
+                            /* o onChange é utili em situações que é necessários reagir a cada alteração do input */
+                            onChange={handleConfirmarSenhaChange}
+                        />
+                        <span onClick={() => setMostrarConfirmarSenha(!mostrarConfirmarSenha)}>
+                            {mostrarConfirmarSenha ? <VisivelIcon /> : <OcultoIcon />} {/* Ícone para mostrar/ocultar confirmação da senha */}
+                        </span>
+                        <PasswordIcon/>
+                        {senhaConfirmada === false && (
+                            <span style={{ color: "red", fontSize: "0.9rem", marginTop: "1px", display: "block" }}>
+                                As senhas não coincidem.
+                            </span>
+                        )}
+                    </div>
+                    <button type="submit">Criar</button>
+                </form>
+            </SectionNovoUsuario>
+            {modalprofile && <Overlay onClick={toggleModal}/>}
+            {modalprofile && (
+                <DivImageModal>
+                    <FecharIcon onClick={toggleModal} />
+                    <h3>Selecionar Avatar</h3>
+                    <SelecionarAvatar>
+                        <div className="avatar">
+                            <img src={selectedImage} alt="Avatar Perfil" />
+                        </div>
+                        <div className="avatar-pessoal">
+                            <div className="camera-avatar">
+                                <TirarFotoIcon/>
+                                <a href="#">Camera</a> 
+                            </div>
+                            <div className="galeria-avatar">
+                                <GaleriaIcon/>
+                                <a href="#">Galeria</a>
                             </div>
                         </div>
-                    )}
-                </DivImgProfile>
-                <div className="input-field">
-                    <input 
-                        type="text" 
-                        name="nome"
-                        value={usuarios.nome}
-                        onChange={handleNomeChange}
-                        placeholder="Nome"
-                        required 
-                        /* o onChange é utili em situações que é necessários reagir a cada alteração do input */
-                    />
-                    {/* Regras*/}
-                    {!nomeValido && (
-                        <span style={{ color: "red", fontSize: "0.9rem", marginTop: "1px", display: "block" }}>
-                            O nome deve conter apenas letras.
-                        </span>
-                    )}
-                </div>
-                <div className="input-field">
-                    <input 
-                        type="text" 
-                        name="sobrenome"
-                        value={usuarios.sobrenome}
-                        placeholder="Sobrenome"
-                        required 
-                        /* o onChange é utili em situações que é necessários reagir a cada alteração do input */
-                        onChange={handleSobrenomeChange}
-                    />
-                    {!sobrenomeValido && (
-                        <span style={{ color: "red", fontSize: "0.9rem", marginTop: "1px", display: "block" }}>
-                            O sobrenome deve conter apenas letras.
-                        </span>
-                    )}
-                </div>
-                <div className="input-field">
-                    <input 
-                        type="text" 
-                        name="usuario"
-                        value={usuarios.usuario}
-                        placeholder="Usuário"
-                        required 
-                        /* o onChange é utili em situações que é necessários reagir a cada alteração do input */
-                        onChange={handleChange}
-                    />
-                    <UserIcon/>
-                </div>
-                <div className="input-field">
-                    <input 
-                        type="email" 
-                        name="email"
-                        value={usuarios.email}
-                        placeholder="Email"
-                        required 
-                        /* o onChange é utili em situações que é necessários reagir a cada alteração do input */
-                        onChange={handleEmailChange}
-                    />
-                    <EmailIcon />
-                    {!emailValido && (
-                        <span style={{ color: "red", fontSize: "0.9rem", marginTop: "1px", display: "block" }}>
-                            O email deve conter "@"
-                        </span>
-                    )}
-                </div>
-                <div className="input-field">
-                    <input 
-                        type={mostrarSenha ? "text" : "password"}
-                        name="senha"
-                        value={usuarios.senha}
-                        placeholder="Senha"
-                        required
-                        /* o onChange é utili em situações que é necessários reagir a cada alteração do input */
-                        onChange={handleSenhaChange}
-                    />
-                    <span onClick={() => setMostrarSenha(!mostrarSenha)} >
-                        {mostrarSenha ? <VisivelIcon /> : <OcultoIcon />} {/* Ícone para mostrar/ocultar senha */}
-                    </span>
-                    <PasswordIcon/>
-                    {senhaValida === false && (
-                        <span style={{ color: "red", fontSize: "0.9rem", marginTop: "1px", display: "block" }}>
-                            Mínimo 8 caracteres, 1 letra maiúscula e 1 número.
-                        </span>
-                    )}
-                </div>
-                <div className="input-field">
-                    <input 
-                        type={mostrarConfirmarSenha ? "text" : "password"}
-                        name="confirmarSenha"
-                        value={confirmarSenha}
-                        placeholder="Confirme sua Senha"
-                        required
-                        /* o onChange é utili em situações que é necessários reagir a cada alteração do input */
-                        onChange={handleConfirmarSenhaChange}
-                    />
-                    <span onClick={() => setMostrarConfirmarSenha(!mostrarConfirmarSenha)}>
-                        {mostrarConfirmarSenha ? <VisivelIcon /> : <OcultoIcon />} {/* Ícone para mostrar/ocultar confirmação da senha */}
-                    </span>
-                    <PasswordIcon/>
-                    {senhaConfirmada === false && (
-                        <span style={{ color: "red", fontSize: "0.9rem", marginTop: "1px", display: "block" }}>
-                            As senhas não coincidem.
-                        </span>
-                    )}
-                </div>
-                <button type="submit">Criar</button>
-            </form>
-        </SectionNovoUsuario>
+                        <div className="sugestao-avatar">
+                            <h4>Sugestões de Avatares</h4>
+                            <div className="sugestao-img">
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg)}>
+                                    <img src={UsuarioImg} alt="Icone - Avatar" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg1)}>
+                                    <img src={UsuarioImg1} alt="Icone - Avatar" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg2)}>
+                                    <img src={UsuarioImg2} alt="Icone - Avatar" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg3)}>
+                                    <img src={UsuarioImg3} alt="Icone - Avatar carro formula E desenho" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg4)}>
+                                    <img src={UsuarioImg4} alt="Icone - Avatar carro formula E desenho dark" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg5)}>
+                                    <img src={UsuarioImg5} alt="Icone - Avatar formula E" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg6)}>
+                                    <img src={UsuarioImg6} alt="Icone - Avatar carro formula E" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg7)}>
+                                    <img src={UsuarioImg7} alt="Icone - Avatar carro formula E" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg8)}>
+                                    <img src={UsuarioImg8} alt="Icone - Avatar capacete formula E" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg9)}>
+                                     <img src={UsuarioImg9} alt="Icone - Avatar bandeira chegada formula E" />
+                                </a>
+                            </div>
+                        </div>
+                    </SelecionarAvatar>
+                    <DivBotoesModal>
+                        <button className="save-modal-btn" onClick={handleSaveImage}>Salvar</button>
+                        <button className="close-modal-btn" onClick={toggleModal}>Fechar</button>
+                    </DivBotoesModal>
+                </DivImageModal>
+            )}
+        </>
     )
 }
 

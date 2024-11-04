@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 
 import { DivLoginMenu, DivLoginUsername, EditIcon, PowerOffIcon, ProfileIcon } from "./nav-styled"
 import UsuarioImg from "./../../assets/images/usuario-login.png"
-import UsuarioImg1 from "./../../assets/images/usuario-login1.png"
-import UsuariaImg from "./../../assets/images/usuaria-login.png"
-
 
 const LoginBtn = ({handleLogout}) => {
 
@@ -111,7 +108,7 @@ const LoginBtn = ({handleLogout}) => {
                     <span>{usuarioDados ? usuarioDados.email : "email"}</span>
                 </div>
                 <div className="imgCx">
-                    <img src={UsuarioImg} alt="Icone Usuario" />
+                    <img src={usuarioDados && usuarioDados.avatar ? usuarioDados.avatar : UsuarioImg} alt="Icone Usuario" />
                 </div>
             </DivLoginUsername>
             <DivLoginMenu className={isDropdownOpen ? "dropdown" :""}>

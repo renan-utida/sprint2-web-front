@@ -1,5 +1,6 @@
+
 import { useEffect, useState } from "react";
-import { DivBotoesModal, DivEditarUsuario, DivModal, DivModal1, EditarIcon, FecharIcon, Overlay, SectionEditarUsuario, OcultoIcon, VisivelIcon } from "./editar-conta-styled";
+import { DivBotoesModal, DivEditarUsuario, DivModal, DivModal1, EditarIcon, FecharIcon, Overlay, SectionEditarUsuario, OcultoIcon, VisivelIcon, DivEditarAvatar, DivBotoesEditModal, SelecionarAvatarNovo, DivEditarImageModal, TirarFotoIcon, GaleriaIcon } from "./editar-conta-styled";
 
 const EditarUsuario = () => {
     const [usuarioDados, setUsuarioDados] = useState(null);
@@ -17,6 +18,8 @@ const EditarUsuario = () => {
     const [sobrenomeValido, setSobrenomeValido] = useState(true);
     const [senhaValida, setSenhaValida] = useState(false);
     const [senhaConfirmada, setSenhaConfirmada] = useState(true);
+    const [modalEditAvatar, setModalEditAvatar] = useState(false); // Novo estado para o modal de avatar
+    const [novoAvatar, setNovoAvatar] = useState("");
 
     // Desativa o scroll enquanto o modal estiver aberto
     useEffect(() => {
@@ -62,6 +65,12 @@ const EditarUsuario = () => {
     const fecharModal = () => {
         setModalConfirmacao(false);
         setModalEdicao(false);
+        setModalEditAvatar(false);
+    };
+
+    const abrirModalEditAvatar = () => {
+        setModalConfirmacao(false);
+        setModalEditAvatar(true);
     };
 
     const abrirModalEdicao = () => {
@@ -110,6 +119,7 @@ const EditarUsuario = () => {
     };
 
     const handleEditar = () => {
+
         if (campoParaEditar === "email" && !emailValido) {
             alert("O email deve conter o caractere '@'. Tente novamente!");
             return;
@@ -172,12 +182,22 @@ const EditarUsuario = () => {
 
     if (!usuarioDados) return <p>Carregando dados...</p>;
 
-    const { nome, sobrenome, usuario, email, senha } = usuarioDados;
+    const { nome, sobrenome, usuario, email, senha, avatar } = usuarioDados;
 
     return (
         <>
             <SectionEditarUsuario>
                 
+                <DivEditarAvatar>
+                    <div className="editar-dados">
+                        <h2>Avatar:</h2>
+                        <div className="img-avatar">
+                            <img src={avatar} alt="Icone Avatar" />
+                        </div>
+                    </div>
+                    <a onClick={() => abrirModalConfirmacao("avatar")}> Editar Avatar</a> <a/>
+                </DivEditarAvatar>
+
                 <DivEditarUsuario>
                     <div className="editar-dados">
                         <h2>Nome:</h2>
@@ -316,6 +336,68 @@ const EditarUsuario = () => {
                     )}
                     <button onClick={handleEditar}>Editar</button>
                 </DivModal1>
+            )}
+
+            {modalEditAvatar && <Overlay onClick={toggleModal}/>}
+            {modalEditAvatar && (
+                <DivEditarImageModal>
+                    <FecharIcon onClick={toggleModal} />
+                    <h3>Selecionar Avatar</h3>
+                    <SelecionarAvatarNovo>
+                        <div className="avatar">
+                            <img src={selectedImage} alt="Avatar Perfil" />
+                        </div>
+                        <div className="avatar-pessoal">
+                            <div className="camera-avatar">
+                                <TirarFotoIcon/>
+                                <a href="#">Camera</a> 
+                            </div>
+                            <div className="galeria-avatar">
+                                <GaleriaIcon/>
+                                <a href="#">Galeria</a>
+                            </div>
+                        </div>
+                        <div className="sugestao-avatar">
+                            <h4>Sugestões de Avatares</h4>
+                            <div className="sugestao-img">
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg)}>
+                                    <img src={UsuarioImg} alt="Icone - Avatar" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg1)}>
+                                    <img src={UsuarioImg1} alt="Icone - Avatar" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg2)}>
+                                    <img src={UsuarioImg2} alt="Icone - Avatar" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg3)}>
+                                    <img src={UsuarioImg3} alt="Icone - Avatar carro formula E desenho" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg4)}>
+                                    <img src={UsuarioImg4} alt="Icone - Avatar carro formula E desenho dark" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg5)}>
+                                    <img src={UsuarioImg5} alt="Icone - Avatar formula E" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg6)}>
+                                    <img src={UsuarioImg6} alt="Icone - Avatar carro formula E" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg7)}>
+                                    <img src={UsuarioImg7} alt="Icone - Avatar carro formula E" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg8)}>
+                                    <img src={UsuarioImg8} alt="Icone - Avatar capacete formula E" />
+                                </a>
+                                <a href="#" onClick={() => handleImageSelect(UsuarioImg9)}>
+                                     <img src={UsuarioImg9} alt="Icone - Avatar bandeira chegada formula E" />
+                                </a>
+                            </div>
+                        </div>
+                    </SelecionarAvatarNovo>
+                    <DivBotoesEditModal>
+                        <button className="save-modal-btn" onClick={handleSaveImage}>Salvar</button>
+                        <button className="close-modal-btn" onClick={toggleModal}>Fechar</button>
+                    </DivBotoesEditModal>
+                </DivEditarImageModal>
             )}
         </>
     );

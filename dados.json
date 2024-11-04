@@ -7,6 +7,33 @@
       "sobrenome": "Dias",
       "email": "renan@email.com",
       "senha": "Renan123456"
+    },
+    {
+      "id": "880b",
+      "usuario": "RJ123",
+      "nome": "Renan",
+      "sobrenome": "Jose",
+      "email": "robson@email.com",
+      "senha": "Robson123",
+      "avatar": "/src/assets/images/usuario-login8.png"
+    },
+    {
+      "id": "00e2",
+      "usuario": "RX123",
+      "nome": "Renan",
+      "sobrenome": "Cesar",
+      "email": "jorge@email.com",
+      "senha": "Renan123",
+      "avatar": "/src/assets/images/usuario-login9.png"
+    },
+    {
+      "id": "5f1b",
+      "usuario": "Jorjao",
+      "nome": "Renan",
+      "sobrenome": "Dias",
+      "email": "jorge@email.com",
+      "senha": "Jorge123",
+      "avatar": "/src/assets/images/usuario-login4.png"
     }
   ]
 }
