@@ -2,6 +2,17 @@
 import { useEffect, useState } from "react";
 import { DivBotoesModal, DivEditarUsuario, DivModal, DivModal1, EditarIcon, FecharIcon, Overlay, SectionEditarUsuario, OcultoIcon, VisivelIcon, DivEditarAvatar, DivBotoesEditModal, SelecionarAvatarNovo, DivEditarImageModal, TirarFotoIcon, GaleriaIcon } from "./editar-conta-styled";
 
+import UsuarioImg from "./../../assets/images/usuario-login.png"
+import UsuarioImg1 from "./../../assets/images/usuario-login1.png"
+import UsuarioImg2 from "./../../assets/images/usuario-login2.png"
+import UsuarioImg3 from "./../../assets/images/usuario-login3.png"
+import UsuarioImg4 from "./../../assets/images/usuario-login4.png"
+import UsuarioImg5 from "./../../assets/images/usuario-login5.png"
+import UsuarioImg6 from "./../../assets/images/usuario-login6.png"
+import UsuarioImg7 from "./../../assets/images/usuario-login7.png"
+import UsuarioImg8 from "./../../assets/images/usuario-login8.png"
+import UsuarioImg9 from "./../../assets/images/usuario-login9.png"
+
 const EditarUsuario = () => {
     const [usuarioDados, setUsuarioDados] = useState(null);
     const [modalConfirmacao, setModalConfirmacao] = useState(false);
@@ -19,11 +30,10 @@ const EditarUsuario = () => {
     const [senhaValida, setSenhaValida] = useState(false);
     const [senhaConfirmada, setSenhaConfirmada] = useState(true);
     const [modalEditAvatar, setModalEditAvatar] = useState(false); // Novo estado para o modal de avatar
-    const [novoAvatar, setNovoAvatar] = useState("");
 
     // Desativa o scroll enquanto o modal estiver aberto
     useEffect(() => {
-        if (modalConfirmacao || modalEdicao) {
+        if (modalConfirmacao || modalEdicao || modalEditAvatar) {
             document.body.style.overflow = "hidden";
         } else {
             document.body.style.overflow = "auto";
@@ -33,7 +43,7 @@ const EditarUsuario = () => {
         return () => {
             document.body.style.overflow = "auto";
         };
-    }, [modalConfirmacao, modalEdicao]);
+    }, [modalConfirmacao, modalEdicao, modalEditAvatar]);
     
     useEffect(() => {
         const usuarioLogado = sessionStorage.getItem("usuario");
@@ -118,6 +128,43 @@ const EditarUsuario = () => {
         setSenhaConfirmada(value === novoDado);
     };
 
+    // Estado para armazenar a imagem selecionada
+    const [selectedImage, setSelectedImage] = useState(UsuarioImg);
+
+    // Função para atualizar a imagem selecionada ao clicar em uma imagem de sugestão
+    const handleImageSelect = (imgSrc) => {
+        setSelectedImage(imgSrc);
+    };
+
+    // Função para salvar a imagem selecionada como avatar
+    const handleSaveAvatar = () => {
+        if (!selectedImage) return;
+
+        // Atualizar o avatar no backend
+        fetch(`http://localhost:5003/usuarios/${usuarioDados.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ avatar: selectedImage }),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Erro ao atualizar o avatar");
+            }
+            return response.json();
+        })
+        .then(updatedData => {
+            // Atualiza o estado local e sessionStorage com o novo avatar
+            setUsuarioDados(prev => ({ ...prev, avatar: selectedImage }));
+            sessionStorage.setItem("usuarioDados", JSON.stringify(updatedData));
+            
+            alert("Avatar atualizado com sucesso!");
+            fecharModal(); // Fecha o modal após salvar
+        })
+        .catch(error => console.error("Erro ao salvar o avatar:", error));
+    };
+
     const handleEditar = () => {
 
         if (campoParaEditar === "email" && !emailValido) {
@@ -192,7 +239,7 @@ const EditarUsuario = () => {
                     <div className="editar-dados">
                         <h2>Avatar:</h2>
                         <div className="img-avatar">
-                            <img src={avatar} alt="Icone Avatar" />
+                            <img src={usuarioDados.avatar || UsuarioImg} alt="Icone Avatar" />
                         </div>
                     </div>
                     <a onClick={() => abrirModalConfirmacao("avatar")}> Editar Avatar</a> <a/>
@@ -239,13 +286,17 @@ const EditarUsuario = () => {
                 </DivEditarUsuario>
                 
             </SectionEditarUsuario>
-            {(modalConfirmacao || modalEdicao) && <Overlay />}
+            {(modalConfirmacao || modalEdicao || modalEditAvatar) && <Overlay />}
             {modalConfirmacao && (
                 <DivModal>
                     <FecharIcon onClick={fecharModal} />
                     <h3>Gostaria de editar o {campoParaEditar}?</h3>
                     <DivBotoesModal>
-                        <button className="modal-btn-sim" onClick={abrirModalEdicao}>Sim, obrigado!</button>
+                        {campoParaEditar === "avatar" ? (
+                            <button className="modal-btn-sim" onClick={abrirModalEditAvatar}>Sim, obrigado!</button>
+                        ) : (
+                            <button className="modal-btn-sim" onClick={abrirModalEdicao}>Sim, obrigado!</button>
+                        )}
                         <button className="modal-btn-nao" onClick={fecharModal}>Não, obrigado!</button>
                     </DivBotoesModal>
                 </DivModal>
@@ -338,24 +389,14 @@ const EditarUsuario = () => {
                 </DivModal1>
             )}
 
-            {modalEditAvatar && <Overlay onClick={toggleModal}/>}
+            {modalEditAvatar && <Overlay onClick={fecharModal}/>}
             {modalEditAvatar && (
                 <DivEditarImageModal>
-                    <FecharIcon onClick={toggleModal} />
+                    <FecharIcon onClick={fecharModal} />
                     <h3>Selecionar Avatar</h3>
                     <SelecionarAvatarNovo>
                         <div className="avatar">
                             <img src={selectedImage} alt="Avatar Perfil" />
-                        </div>
-                        <div className="avatar-pessoal">
-                            <div className="camera-avatar">
-                                <TirarFotoIcon/>
-                                <a href="#">Camera</a> 
-                            </div>
-                            <div className="galeria-avatar">
-                                <GaleriaIcon/>
-                                <a href="#">Galeria</a>
-                            </div>
                         </div>
                         <div className="sugestao-avatar">
                             <h4>Sugestões de Avatares</h4>
@@ -394,8 +435,8 @@ const EditarUsuario = () => {
                         </div>
                     </SelecionarAvatarNovo>
                     <DivBotoesEditModal>
-                        <button className="save-modal-btn" onClick={handleSaveImage}>Salvar</button>
-                        <button className="close-modal-btn" onClick={toggleModal}>Fechar</button>
+                        <button className="save-modal-btn" onClick={handleSaveAvatar}>Salvar</button>
+                        <button className="close-modal-btn" onClick={fecharModal}>Fechar</button>
                     </DivBotoesEditModal>
                 </DivEditarImageModal>
             )}

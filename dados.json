@@ -6,7 +6,8 @@
       "nome": "Renan",
       "sobrenome": "Dias",
       "email": "renan@email.com",
-      "senha": "Renan123456"
+      "senha": "Renan123456",
+      "avatar": "/src/assets/images/usuario-login5.png"
     },
     {
       "id": "880b",
