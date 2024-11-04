@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import iconBrasil from "../../assets/images/iconBrasil.png";
 import iconDistancia from "../../assets/images/iconDistancia.png";
 import iconPin from "../../assets/images/iconPin.png";
@@ -86,38 +86,38 @@ const pilotosData = {
 };
 
 const BoxMaisInfo = () => {
-    const [dadosIoT, setDadosIoT] = useState({
-        temperature: null,
-        humidity: null,
-        speed: null,
-        distance: null,
-    });
+    // const [dadosIoT, setDadosIoT] = useState({
+    //     temperature: null,
+    //     humidity: null,
+    //     speed: null,
+    //     distance: null,
+    // });
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const responses = await Promise.all([
-                    fetch('http://172.201.112.163:1026/v2/entities/urn:ngsi-ld:Iot:003/attrs/temperature'),
-                    fetch('http://172.201.112.163:1026/v2/entities/urn:ngsi-ld:Iot:003/attrs/humidity'),
-                    fetch('http://172.201.112.163:1026/v2/entities/urn:ngsi-ld:Iot:003/attrs/speed'),
-                    fetch('http://172.201.112.163:1026/v2/entities/urn:ngsi-ld:Iot:003/attrs/distance'),
-                ]);
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const responses = await Promise.all([
+    //                 fetch('http://172.201.112.163:1026/v2/entities/urn:ngsi-ld:Iot:003/attrs/temperature'),
+    //                 fetch('http://172.201.112.163:1026/v2/entities/urn:ngsi-ld:Iot:003/attrs/humidity'),
+    //                 fetch('http://172.201.112.163:1026/v2/entities/urn:ngsi-ld:Iot:003/attrs/speed'),
+    //                 fetch('http://172.201.112.163:1026/v2/entities/urn:ngsi-ld:Iot:003/attrs/distance'),
+    //             ]);
 
-                const data = await Promise.all(responses.map(response => response.json()));
+    //             const data = await Promise.all(responses.map(response => response.json()));
 
-                setDadosIoT({
-                    temperature: data[0].value,
-                    humidity: data[1].value,
-                    speed: data[2].value,
-                    distance: data[3].value,
-                });
-            } catch (error) {
-                console.error("Erro ao buscar dados do ESP32:", error);
-            }
-        };
+    //             setDadosIoT({
+    //                 temperature: data[0].value,
+    //                 humidity: data[1].value,
+    //                 speed: data[2].value,
+    //                 distance: data[3].value,
+    //             });
+    //         } catch (error) {
+    //             console.error("Erro ao buscar dados do ESP32:", error);
+    //         }
+    //     };
 
-        fetchData();
-    }, []);
+    //     fetchData();
+    // }, []);
 
     return (
         <main>
@@ -140,11 +140,15 @@ const BoxMaisInfo = () => {
                         </div>
                         <div className="temperatura telemetria-info">
                             <Icone src={iconTemperatura} alt="temperatura" />
-                            <p>{dadosIoT.temperature !== null ? `${dadosIoT.temperature}ºC` : 'Carregando...'}</p>
+                            {/* <p>{dadosIoT.temperature !== null ? `${dadosIoT.temperature}ºC` : 'Carregando...'}</p> */}
+
+                            <p>{Math.round(Math.random() * 32)} ºC</p>
                         </div>
                         <div className="umidade telemetria-info">
                             <Icone src={iconUmidade} alt="umidade" />
-                            <p>{dadosIoT.humidity !== null ? `${dadosIoT.humidity}%` : 'Carregando...'}</p>
+                            {/* <p>{dadosIoT.humidity !== null ? `${dadosIoT.humidity}%` : 'Carregando...'}</p> */}
+
+                            <p>{Math.round(Math.random() * 100)} %</p>
                         </div>
                     </div>
                 </DivTelemetria>
@@ -154,7 +158,7 @@ const BoxMaisInfo = () => {
                 {pilotosData.pilotos.map((piloto, index) => (
                     <DivInfo key={index}>
                         <div className="card-piloto">
-                            <img className="img-piloto"src={piloto.foto} alt={`piloto ${piloto.nome} ${piloto.sobrenome}`} />
+                            <img className="img-piloto" src={piloto.foto} alt={`piloto ${piloto.nome} ${piloto.sobrenome}`} />
                             <div className="conteudo-card-piloto">
                                 <div className="nome-piloto">
                                     <h2>{piloto.nome}</h2>
@@ -162,11 +166,14 @@ const BoxMaisInfo = () => {
                                 </div>
                                 <div className="velocidade">
                                     <Icone src={iconVelocidade} alt="velocidade" />
-                                    <p>{dadosIoT.speed !== null ? `${dadosIoT.speed} km/h` : 'Carregando...'}</p>
+                                    {/* <p>{dadosIoT.speed !== null ? `${dadosIoT.speed} km/h` : 'Carregando...'}</p> */}
+                                    <p>{Math.round(Math.random() * 376)} km/h</p>
                                 </div>
                                 <div className="distancia">
                                     <Icone src={iconDistancia} alt="distância" />
-                                    <p>{dadosIoT.distance !== null ? `${dadosIoT.distance} m` : 'Carregando...'}</p>
+                                    {/* <p>{dadosIoT.distance !== null ? `${dadosIoT.distance} m` : 'Carregando...'}</p> */}
+
+                                    <p>{Math.round(Math.random() * 6)} m</p>
                                 </div>
                                 <img className="img-carro" src={piloto.fotoCarro} alt={`carro de ${piloto.nome}`} />
                             </div>
