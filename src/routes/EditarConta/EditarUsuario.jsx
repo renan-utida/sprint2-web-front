@@ -18,6 +18,20 @@ const EditarUsuario = () => {
     const [senhaValida, setSenhaValida] = useState(false);
     const [senhaConfirmada, setSenhaConfirmada] = useState(true);
 
+    // Desativa o scroll enquanto o modal estiver aberto
+    useEffect(() => {
+        if (modalConfirmacao || modalEdicao) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+    
+        // Limpeza para restaurar o overflow quando o componente desmonta
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [modalConfirmacao, modalEdicao]);
+    
     useEffect(() => {
         const usuarioLogado = sessionStorage.getItem("usuario");
         const usuarioSalvo = JSON.parse(sessionStorage.getItem("usuarioDados"));
@@ -163,8 +177,6 @@ const EditarUsuario = () => {
     return (
         <>
             <SectionEditarUsuario>
-
-                {(modalConfirmacao || modalEdicao) && <Overlay />}
                 
                 <DivEditarUsuario>
                     <div className="editar-dados">
@@ -207,7 +219,7 @@ const EditarUsuario = () => {
                 </DivEditarUsuario>
                 
             </SectionEditarUsuario>
-
+            {(modalConfirmacao || modalEdicao) && <Overlay />}
             {modalConfirmacao && (
                 <DivModal>
                     <FecharIcon onClick={fecharModal} />

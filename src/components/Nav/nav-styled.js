@@ -484,7 +484,7 @@ export const DivLoginUsername = styled.div`
     }
 
     .boasvindas-login .nome-login{
-        color: blue;
+        color: #6060ff;
         font-size: 1.3rem;
     }
 

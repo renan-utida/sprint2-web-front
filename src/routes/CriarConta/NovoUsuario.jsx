@@ -1,4 +1,4 @@
-import { EmailIcon, OcultoIcon, PasswordIcon, SectionNovoUsuario, UserIcon, VisivelIcon } from "./cadastro-conta-styled"
+import { DivImgProfile, EmailIcon, OcultoIcon, PasswordIcon, SectionNovoUsuario, UserIcon, VisivelIcon } from "./cadastro-conta-styled"
 
 import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
@@ -150,10 +150,52 @@ const NovoUsuario =()=>{
         }
     },[id]);  
 
+    const [modalprofile, setModal] = useState(false);
+
+    const toggleModal = () => {
+        setModal(!modalprofile);
+    };
+
+    // Desativa o scroll enquanto o modal estiver aberto
+    useEffect(() => {
+        if (modalprofile) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+    
+        // Limpeza para restaurar o overflow quando o componente desmonta
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [modalprofile]);
+
     return(
         <SectionNovoUsuario>
             <form onSubmit={handleSubmit}>
                 <h1>Criar uma Conta</h1>
+                <DivImgProfile>
+                    <button 
+                        className="btn-modal"
+                        onClick={toggleModal}>
+                            Open
+                    </button>
+
+                    {modalprofile && (
+                        <div className="modal">
+                            <div className="overlay" onClick={toggleModal}></div>
+                            <div className="modal-content">
+                                <h2>Hello Modal</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odio aliquid, ullam cupiditate illo nesciunt ea possimus praesentium obcaecati similique adipisci, expedita, autem fugit odit. Alias nihil ducimus atque id?</p>
+                                <button 
+                                    className="close-modal"
+                                    onClick={toggleModal}>
+                                        Close  
+                                </button>
+                            </div>
+                        </div>
+                    )}
+                </DivImgProfile>
                 <div className="input-field">
                     <input 
                         type="text" 
