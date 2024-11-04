@@ -4,9 +4,12 @@ import { Link, useNavigate } from "react-router-dom";
 import IconUsuario from "../../assets/images/icons8-usuario.png";
 import IconSenha from "../../assets/images/icons8-trancar.png";
 
-import { SectionLogin } from "./login-styled";
+import { OcultoIcon, PasswordIcon, SectionLogin, UserIcon, VisivelIcon } from "./login-styled";
 
 const BoxLogin = () => {
+
+    // Controle da visibilidade da senha
+    const [mostrarSenha, setMostrarSenha] = useState(false);
 
     // Hook - useRef - Pega a referência de um elemento ou componente e guarda
     const usuario = useRef();
@@ -76,16 +79,19 @@ const BoxLogin = () => {
                         id="usuario"
                         ref={usuario}
                     />
-                    <img src={IconUsuario} alt="Icone Usuario" />
+                    <UserIcon/>
                 </div>
                 <div className="input-field">
                     <input 
-                        type="password" 
+                        type={mostrarSenha ? "text" : "password"}
                         placeholder="Senha"
                         id="senha"
                         ref={senha}
                     />
-                    <img src={IconSenha} alt="Icone Senha" />
+                    <span onClick={() => setMostrarSenha(!mostrarSenha)} >
+                        {mostrarSenha ? <VisivelIcon /> : <OcultoIcon />} {/* Ícone para mostrar/ocultar senha */}
+                    </span>
+                    <PasswordIcon/>
                 </div>
 
                 <div className="recall-forget">

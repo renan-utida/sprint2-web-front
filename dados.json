@@ -1,36 +1,12 @@
 {
   "usuarios": [
     {
-      "id": "d66d",
-      "usuario": "pre",
-      "nome": "Predro",
-      "sobrenome": "Sobrenome",
-      "email": "exemplo@email.com",
-      "senha": "123"
-    },
-    {
-      "id": "b6f2",
+      "id": "a42f",
       "usuario": "R3N4N",
       "nome": "Renan",
       "sobrenome": "Dias",
       "email": "renan@email.com",
-      "senha": "123456"
-    },
-    {
-      "id": "5db6",
-      "usuario": "Jorge o foda",
-      "nome": "Jorge",
-      "sobrenome": "Dias",
-      "email": "jorge@email.com",
-      "senha": "123"
-    },
-    {
-      "id": "44f7",
-      "usuario": "Igao",
-      "nome": "Igor",
-      "sobrenome": "Silva",
-      "email": "igorsilva@email.com",
-      "senha": "Igor123456"
+      "senha": "Renan123456"
     }
   ]
 }

@@ -29,6 +29,13 @@ const MenuHamburger=({isAuthenticated, handleLogout})=>{
         setSubMenuActive(!subMenuActive); // Alterna a exibição do submenu
     };
 
+    const logout = () => {
+        sessionStorage.removeItem("usuario");
+        sessionStorage.removeItem("usuarioDados");
+        // Adicione qualquer outra chave específica de usuário que esteja no sessionStorage
+        window.location.reload(); // Opcional, para garantir que os dados antigos não fiquem na memória
+    };
+
     const handleQuizNavigation = () => {
         if (isAuthenticated) {
             navigate("/quiz");
@@ -64,7 +71,7 @@ const MenuHamburger=({isAuthenticated, handleLogout})=>{
                     </li>
                     <li><a onClick={handleQuizNavigation}><QuizIcon /><p>Quiz</p></a></li>
                     {isAuthenticated ? ( 
-                        <li><a onClick={() => {handleLogout(); closeMenu();}}><LogoutIcon /><p>Sair</p></a></li>
+                        <li><a onClick={() => {handleLogout(); closeMenu(); logout();}}><LogoutIcon /><p>Sair</p></a></li>
                     ) : ( 
                         <li><Link to="/login" onClick={closeMenu}><LoginIcon /><p>Login</p></Link></li> 
                     )}

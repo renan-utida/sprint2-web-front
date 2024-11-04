@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import LoginBackground from "../../assets/images/login-background.png"
+import { FaEyeSlash } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+import { FaLock } from "react-icons/fa";
 
 export const MainLogin = styled.main`
     margin-top: 75px;
@@ -225,11 +229,6 @@ export const SectionLogin = styled.section`
         .input-field input{
             font-size: 13px;
         }
-        
-        .input-field img{
-            width: 16px;
-            height: 16px;
-        }
 
         .recall-forget{
             font-size: 11.5px;
@@ -247,3 +246,55 @@ export const SectionLogin = styled.section`
         }
     }        
 `
+
+export const UserIcon = styled(FaUser)`
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 17px;
+    color: rgba(255, 255, 255, 0.65);      // Cor base do ícone
+`;
+
+export const PasswordIcon = styled(FaLock)`
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 17px;
+    color: rgba(255, 255, 255, 0.65);      // Cor base do ícone
+`;
+
+export const OcultoIcon = styled(FaEyeSlash)`
+    position: absolute;
+    right: 55px;
+    top: 14px;
+    width: 23px;
+    height: 23px;
+    color: white;      // Cor base do ícone
+    cursor: pointer;
+    transition: color 0.35s ease;
+    user-select: none;
+
+    &:hover{
+        color: rgba(255, 255, 255, 0.7);
+    }
+`;
+
+export const VisivelIcon = styled(FaEye)`
+    position: absolute;
+    right: 55px;
+    top: 14px;
+    width: 23px;
+    height: 23px;
+    color: white;      // Cor base do ícone
+    cursor: pointer;
+    transition: color 0.35s ease;
+    user-select: none;
+
+    &:hover{
+        color: rgba(255, 255, 255, 0.7);
+    }
+`;

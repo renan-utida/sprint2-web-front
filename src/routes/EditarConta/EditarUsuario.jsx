@@ -20,13 +20,20 @@ const EditarUsuario = () => {
 
     useEffect(() => {
         const usuarioLogado = sessionStorage.getItem("usuario");
-    
-        if (usuarioLogado) {
-            fetch(`http://localhost:5003/usuarios?usuario=${usuarioLogado}`)
+        const usuarioSalvo = JSON.parse(sessionStorage.getItem("usuarioDados"));
+        
+        // Carrega dados do sessionStorage caso estejam disponíveis
+        if (usuarioSalvo) {
+            setUsuarioDados(usuarioSalvo);
+        } else if (usuarioLogado) {
+            const tipo = usuarioLogado.includes("@") ? "email" : "usuario";
+            fetch(`http://localhost:5003/usuarios?${tipo}=${usuarioLogado}`)
                 .then((res) => res.json())
                 .then((data) => {
                     if (data.length > 0) {
                         setUsuarioDados(data[0]);
+                        // Armazena os dados do usuário no sessionStorage
+                        sessionStorage.setItem("usuarioDados", JSON.stringify(data[0]));
                     }
                 })
                 .catch((error) => console.error("Erro ao buscar dados do usuário:", error));
@@ -128,13 +135,18 @@ const EditarUsuario = () => {
                 .then(updatedData => {
                     setUsuarioDados(updatedData); // Atualiza os dados localmente
 
-                    // Atualiza o sessionStorage após a alteração
-                    sessionStorage.setItem("usuario", updatedData.usuario);  // Assumindo que o campo 'usuario' identifica o usuário
-
-                    // Atualiza o nome e o email do usuário no sessionStorage
+                    // Armazenar nome diretamente
                     sessionStorage.setItem("nome", updatedData.nome);
-                    sessionStorage.setItem("email", updatedData.email);
+
+                    // Gerar um token para email e usuário
+                    let tokenEmail = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2);
+                    let tokenUsuario = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2);
+
+                    // Armazenar os tokens no sessionStorage
+                    sessionStorage.setItem("email", tokenEmail); // "Criptografando" o email
+                    sessionStorage.setItem("usuario", tokenUsuario); // "Criptografando" o usuário
                     
+                    sessionStorage.setItem("usuarioDados", JSON.stringify(updatedData));
                     alert(`${campoParaEditar.charAt(0).toUpperCase() + campoParaEditar.slice(1)} alterado com sucesso!`);
                     fecharModal();
                 })
