@@ -105,6 +105,8 @@ export const DivLugar = styled.div`
     .informacao-lugar .weather-info{
         display: flex;
         flex-direction: row;
+        margin-top: 20px;
+        margin-left: 5px;
     }
 
     .informacao-lugar img{
@@ -130,6 +132,15 @@ export const DivLugar = styled.div`
     .informacao-lugar .umidade-info{
         display: flex;
         flex-direction: row;
+    }
+
+    .umidade-info .weather-number{
+        display: flex;
+        margin-left: 5px;
+    }
+
+    .temperatura-info .weather-number{
+        display: flex;
     }
 
 

@@ -40,6 +40,8 @@ const BoxInfo = () => {
 	// 	fetchData();
 	// }, []);
 
+	const generateTemperature = () => (Math.random() * (33 - 5) + 5).toFixed(1);
+	const generateHumidity = () => (Math.random() * (85 - 30) + 30).toFixed(2);
 
 	return (
 		<SectionInfo>
@@ -62,12 +64,18 @@ const BoxInfo = () => {
 							<div className="temperatura-info">
 								<img src={TemperaturaCorridas} alt="Icone Temperatura" />
 								{/* <p>{dadosClima.temperature !== null ? `${dadosClima.temperature}ºC` : '...'}</p> */}
-								<p>{Math.round(Math.floor(Math.random() * 32) + 28)} ºC</p>
+								<div className="weather-number">
+									<p>{generateTemperature()}</p>
+									<p>ºC</p>
+								</div>
 							</div>
 							<div className="umidade-info">
 								<img src={UmidadeCorridas} alt="Icone Umidade" />
 								{/* <p className="style-umidade">{dadosClima.humidity !== null ? `${dadosClima.humidity}%` : '...'}</p> */}
-								<p>{Math.round(Math.random() * 100)} %</p>
+								<div className="weather-number">
+									<p>{generateHumidity()}</p>
+									<p>%</p>
+								</div>
 							</div>
 						</div>
 					</div>

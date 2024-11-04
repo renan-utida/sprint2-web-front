@@ -6,6 +6,7 @@ import { FaEye } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
+import { FaImage } from "react-icons/fa";
 
 export const MainCriarConta = styled.main`
     margin-top: 75px;

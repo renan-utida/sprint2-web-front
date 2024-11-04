@@ -1,5 +1,5 @@
 
-import { DivBotoesModal, DivImageModal, DivImgProfile, EmailIcon, FecharIcon, GaleriaIcon, ImageIcon, OcultoIcon, Overlay, PasswordIcon, SectionNovoUsuario, SelecionarAvatar, TirarFotoIcon, UserIcon, VisivelIcon } from "./cadastro-conta-styled"
+import { DivBotoesModal, DivImageModal, DivImgProfile, EmailIcon, FecharIcon, ImageIcon, OcultoIcon, Overlay, PasswordIcon, SectionNovoUsuario, SelecionarAvatar, UserIcon, VisivelIcon } from "./cadastro-conta-styled"
 
 import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"

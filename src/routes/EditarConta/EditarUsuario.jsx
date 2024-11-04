@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { DivBotoesModal, DivEditarUsuario, DivModal, DivModal1, EditarIcon, FecharIcon, Overlay, SectionEditarUsuario, OcultoIcon, VisivelIcon, DivEditarAvatar, DivBotoesEditModal, SelecionarAvatarNovo, DivEditarImageModal, TirarFotoIcon, GaleriaIcon } from "./editar-conta-styled";
+import { DivBotoesModal, DivEditarUsuario, DivModal, DivModal1, EditarIcon, FecharIcon, Overlay, SectionEditarUsuario, OcultoIcon, VisivelIcon, DivEditarAvatar, DivBotoesEditModal, SelecionarAvatarNovo, DivEditarImageModal } from "./editar-conta-styled";
 
 import UsuarioImg from "./../../assets/images/usuario-login.png"
 import UsuarioImg1 from "./../../assets/images/usuario-login1.png"

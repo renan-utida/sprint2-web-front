@@ -1,4 +1,3 @@
-// import { useEffect, useState } from 'react';
 import iconBrasil from "../../assets/images/iconBrasil.png";
 import iconDistancia from "../../assets/images/iconDistancia.png";
 import iconPin from "../../assets/images/iconPin.png";
@@ -85,6 +84,12 @@ const pilotosData = {
     ]
 };
 
+// Função para gerar números aleatórios dentro de um intervalo
+const gerarNumeroAleatorio = (min, max, decimalPlaces = 0) => {
+    const valor = (Math.random() * (max - min) + min).toFixed(decimalPlaces);
+    return parseFloat(valor);
+};
+
 const BoxMaisInfo = () => {
     // const [dadosIoT, setDadosIoT] = useState({
     //     temperature: null,
@@ -142,13 +147,13 @@ const BoxMaisInfo = () => {
                             <Icone src={iconTemperatura} alt="temperatura" />
                             {/* <p>{dadosIoT.temperature !== null ? `${dadosIoT.temperature}ºC` : 'Carregando...'}</p> */}
 
-                            <p>{Math.round(Math.random() * 32)} ºC</p>
+                            <p>{gerarNumeroAleatorio(5, 33, 1)} ºC</p>
                         </div>
                         <div className="umidade telemetria-info">
                             <Icone src={iconUmidade} alt="umidade" />
                             {/* <p>{dadosIoT.humidity !== null ? `${dadosIoT.humidity}%` : 'Carregando...'}</p> */}
 
-                            <p>{Math.round(Math.random() * 100)} %</p>
+                            <p>{gerarNumeroAleatorio(30, 85, 2)} %</p>
                         </div>
                     </div>
                 </DivTelemetria>
@@ -167,13 +172,13 @@ const BoxMaisInfo = () => {
                                 <div className="velocidade">
                                     <Icone src={iconVelocidade} alt="velocidade" />
                                     {/* <p>{dadosIoT.speed !== null ? `${dadosIoT.speed} km/h` : 'Carregando...'}</p> */}
-                                    <p>{Math.round(Math.random() * 376)} km/h</p>
+                                    <p>{gerarNumeroAleatorio(100, 300, 1)} km/h</p>
                                 </div>
                                 <div className="distancia">
                                     <Icone src={iconDistancia} alt="distância" />
                                     {/* <p>{dadosIoT.distance !== null ? `${dadosIoT.distance} m` : 'Carregando...'}</p> */}
 
-                                    <p>{Math.round(Math.random() * 6)} m</p>
+                                    <p>{gerarNumeroAleatorio(1, 5, 2)} m</p>
                                 </div>
                                 <img className="img-carro" src={piloto.fotoCarro} alt={`carro de ${piloto.nome}`} />
                             </div>
