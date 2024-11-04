@@ -6,8 +6,6 @@ import { FaEye } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
-import { FaImage } from "react-icons/fa";
-import { FaCamera } from "react-icons/fa";
 
 export const MainCriarConta = styled.main`
     margin-top: 75px;
@@ -591,20 +589,4 @@ export const FecharIcon = styled(FaXmark)`
     &:hover{
         color: #8181ff;
     }
-`;
-
-export const TirarFotoIcon = styled(FaCamera)`
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    color: inherit;      // Herda a cor do contêiner .camera-avatar
-    transition: color 0.2s ease;
-`;
-
-export const GaleriaIcon = styled(FaImage)`
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    color: inherit;      // Herda a cor do contêiner .camera-avatar
-    transition: color 0.2s ease;
 `;

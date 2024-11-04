@@ -343,16 +343,6 @@ const NovoUsuario =()=>{
                         <div className="avatar">
                             <img src={selectedImage} alt="Avatar Perfil" />
                         </div>
-                        <div className="avatar-pessoal">
-                            <div className="camera-avatar">
-                                <TirarFotoIcon/>
-                                <a href="#">Camera</a> 
-                            </div>
-                            <div className="galeria-avatar">
-                                <GaleriaIcon/>
-                                <a href="#">Galeria</a>
-                            </div>
-                        </div>
                         <div className="sugestao-avatar">
                             <h4>Sugestões de Avatares</h4>
                             <div className="sugestao-img">
