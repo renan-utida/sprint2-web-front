@@ -110,6 +110,7 @@ export const DivUserInfo2 = styled.div`
 `
 
 export const OcultoIcon = styled(FaEyeSlash)`
+    margin-top: 6px;
     width: 23px;
     height: 23px;
     color: #3f3fff;      // Cor base do ícone
