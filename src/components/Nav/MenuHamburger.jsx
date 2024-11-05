@@ -49,7 +49,7 @@ const MenuHamburger=({isAuthenticated, handleLogout})=>{
     return(
         <MenuCabecalho>
             <nav id="nav" className={menuActive ? "active" : ""}>
-                <button id="btn-menu" onClick={toggleMenu} onTouchStart={toggleMenu}>
+                <button id="btn-menu" onClick={toggleMenu}>
                     <span id="hamburger"></span>
                 </button>
                 <ul id="menu">
