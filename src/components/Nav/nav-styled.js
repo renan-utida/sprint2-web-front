@@ -40,7 +40,7 @@ export const DivCabecalho = styled.div`
         display: flex;
         flex-direction: row;
         gap: 0.8rem;
-        margin-right: 50px;
+        margin-right: 80px;
     }
     
     .hamburger-search img{

@@ -113,7 +113,7 @@ const LoginBtn = ({handleLogout}) => {
             </DivLoginUsername>
             <DivLoginMenu className={isDropdownOpen ? "dropdown" :""}>
                 <ul>
-                    <li><a href="#" onClick={handleMenuItemClick}><ProfileIcon/>Perfil</a></li>
+                    <li><Link to='/profile' onClick={handleMenuItemClick}><ProfileIcon/>Perfil</Link></li>
                     <li><Link to="/editar-conta" onClick={handleMenuItemClick}><EditIcon/>Editar Conta</Link></li>
                     <li className="sair-conta">
                         <a onClick={() => { handleLogout(); handleMenuItemClick(); logout();}}><PowerOffIcon/>Sair</a>
