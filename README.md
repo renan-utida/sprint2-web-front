@@ -19,38 +19,6 @@ O site está rodando em `localhost:5173` e apresenta:
 - **Quiz interativo** exclusivo para usuários logados
 - **Sistema completo** de autenticação e perfil de usuário
 
-## 📷 ScrrenShoots 
-
-![image](https://github.com/user-attachments/assets/07b21d65-83fc-41a4-9d83-b9519493d479)
-
-![image](https://github.com/user-attachments/assets/000b587a-0394-4804-945d-8447d584a35f)
-
-![image](https://github.com/user-attachments/assets/8fae82a0-c657-45f1-99df-ac197eb4fe3a)
-
-![image](https://github.com/user-attachments/assets/a012b72d-c1f9-4a48-8a3f-3f09ce755275)
-
-![image](https://github.com/user-attachments/assets/a052e467-cf9f-4f65-a30c-08b96f7af96e)
-
-![image](https://github.com/user-attachments/assets/43a764ec-bd36-4407-8530-eac5ec344aca)
-
-![image](https://github.com/user-attachments/assets/be9b649a-7c35-448b-a447-9edeee61a142)
-
-![image](https://github.com/user-attachments/assets/127b8531-95b5-4eeb-a03f-a2225b288efc)
-
-![image](https://github.com/user-attachments/assets/acf70f43-56af-4856-91b1-2060f837d16f)
-
-![image](https://github.com/user-attachments/assets/2281131b-c9e3-4886-b91d-bf67d2a82bf9)
-
-![image](https://github.com/user-attachments/assets/f7089165-b124-4497-9d10-a8ff78d1cc92)
-
-![image](https://github.com/user-attachments/assets/c50c395e-1ad3-46a7-8537-1042189b0e92)
-
-![image](https://github.com/user-attachments/assets/2f833e00-896e-4278-b81b-e22ad959733f)
-
-![image](https://github.com/user-attachments/assets/421fd6ae-75f5-480b-afde-9a623f9143e7)
-
-![image](https://github.com/user-attachments/assets/195166b8-1385-4d5c-ab24-632841d083f4)
-
 ## ✨ Funcionalidades Principais
 
 ### 🏠 Página Inicial
@@ -190,6 +158,62 @@ Fabrício Carlos Duarte
 **Desenvolvido para os fãs da Fórmula E**
 
 *© 2024 - Todos os direitos reservados*
+
+## 📷 ScreenShots 
+
+### Página Principal 
+
+Carousel de notícias fictícias relacionadas à Fórmula E.
+
+![image](https://github.com/user-attachments/assets/07b21d65-83fc-41a4-9d83-b9519493d479)
+
+últimas notícias organizadas para visualização geral
+
+![image](https://github.com/user-attachments/assets/000b587a-0394-4804-945d-8447d584a35f)
+
+Rodapé/Footer
+
+![image](https://github.com/user-attachments/assets/8fae82a0-c657-45f1-99df-ac197eb4fe3a)
+
+### Página de Fórmula E
+
+Vídeo mostrando um pouco sobre a Fórmula E
+
+![image](https://github.com/user-attachments/assets/a052e467-cf9f-4f65-a30c-08b96f7af96e)
+
+Informações sobre a Fórmula E em Accordion 
+
+![image](https://github.com/user-attachments/assets/9f347d84-5195-49c6-993e-f6184d5beec2)
+
+### Página de Próximas Corridas
+
+Cards Organizados com infos sobre as próximas corridas de Fórmula E
+
+![image](https://github.com/user-attachments/assets/a012b72d-c1f9-4a48-8a3f-3f09ce755275)
+
+### Exibição do Menu Hamburger
+
+Menu Hamburger interativo com toda a navegação do nosso site
+
+![image](https://github.com/user-attachments/assets/43a764ec-bd36-4407-8530-eac5ec344aca)
+
+![image](https://github.com/user-attachments/assets/be9b649a-7c35-448b-a447-9edeee61a142)
+
+![image](https://github.com/user-attachments/assets/127b8531-95b5-4eeb-a03f-a2225b288efc)
+
+![image](https://github.com/user-attachments/assets/acf70f43-56af-4856-91b1-2060f837d16f)
+
+![image](https://github.com/user-attachments/assets/2281131b-c9e3-4886-b91d-bf67d2a82bf9)
+
+![image](https://github.com/user-attachments/assets/f7089165-b124-4497-9d10-a8ff78d1cc92)
+
+![image](https://github.com/user-attachments/assets/c50c395e-1ad3-46a7-8537-1042189b0e92)
+
+![image](https://github.com/user-attachments/assets/2f833e00-896e-4278-b81b-e22ad959733f)
+
+![image](https://github.com/user-attachments/assets/421fd6ae-75f5-480b-afde-9a623f9143e7)
+
+![image](https://github.com/user-attachments/assets/195166b8-1385-4d5c-ab24-632841d083f4)
 
 ## Link do github
 
