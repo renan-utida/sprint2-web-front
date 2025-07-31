@@ -167,13 +167,15 @@ Carousel de notícias fictícias relacionadas à Fórmula E.
 
 ![image](https://github.com/user-attachments/assets/07b21d65-83fc-41a4-9d83-b9519493d479)
 
-últimas notícias organizadas para visualização geral
+Últimas notícias organizadas em exibição
 
 ![image](https://github.com/user-attachments/assets/000b587a-0394-4804-945d-8447d584a35f)
 
 Rodapé/Footer
 
 ![image](https://github.com/user-attachments/assets/8fae82a0-c657-45f1-99df-ac197eb4fe3a)
+
+---
 
 ### Página de Fórmula E
 
@@ -185,25 +187,51 @@ Informações sobre a Fórmula E em Accordion
 
 ![image](https://github.com/user-attachments/assets/9f347d84-5195-49c6-993e-f6184d5beec2)
 
+---
+
 ### Página de Próximas Corridas
 
 Cards Organizados com infos sobre as próximas corridas de Fórmula E
 
 ![image](https://github.com/user-attachments/assets/a012b72d-c1f9-4a48-8a3f-3f09ce755275)
 
+---
+
 ### Exibição do Menu Hamburger
 
 Menu Hamburger interativo com toda a navegação do nosso site
 
+---
+
+### Páginas de Login e Criar Conta
+
+Página de Login para usuários que já possuem conta criada
+
 ![image](https://github.com/user-attachments/assets/43a764ec-bd36-4407-8530-eac5ec344aca)
+
+Página de Criar conta, onde o usuário pode escolher o avatar e deve colocar o nome, sobrenome, email, nome de usuário e senha
 
 ![image](https://github.com/user-attachments/assets/be9b649a-7c35-448b-a447-9edeee61a142)
 
+---
+
+### Página do Quiz
+
+Disponível apenas para usuários cadastrados, lobby inicial do quiz
+
 ![image](https://github.com/user-attachments/assets/127b8531-95b5-4eeb-a03f-a2225b288efc)
+
+Quiz em andamento, onde temos 4 opções de resposta
 
 ![image](https://github.com/user-attachments/assets/acf70f43-56af-4856-91b1-2060f837d16f)
 
+Final do Quiz, exibindo a quantidade de acertos e a pontuação final
+
 ![image](https://github.com/user-attachments/assets/2281131b-c9e3-4886-b91d-bf67d2a82bf9)
+
+---
+
+### Páginas de Perfil e Editar Conta
 
 ![image](https://github.com/user-attachments/assets/f7089165-b124-4497-9d10-a8ff78d1cc92)
 
