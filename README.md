@@ -201,17 +201,19 @@ Cards Organizados com infos sobre as próximas corridas de Fórmula E
 
 Menu Hamburger interativo com toda a navegação do nosso site
 
+![image](https://github.com/user-attachments/assets/43a764ec-bd36-4407-8530-eac5ec344aca)
+
 ---
 
 ### Páginas de Login e Criar Conta
 
 Página de Login para usuários que já possuem conta criada
 
-![image](https://github.com/user-attachments/assets/43a764ec-bd36-4407-8530-eac5ec344aca)
+![image](https://github.com/user-attachments/assets/be9b649a-7c35-448b-a447-9edeee61a142)
 
 Página de Criar conta, onde o usuário pode escolher o avatar e deve colocar o nome, sobrenome, email, nome de usuário e senha
 
-![image](https://github.com/user-attachments/assets/be9b649a-7c35-448b-a447-9edeee61a142)
+![image](https://github.com/user-attachments/assets/127b8531-95b5-4eeb-a03f-a2225b288efc)
 
 ---
 
@@ -219,29 +221,37 @@ Página de Criar conta, onde o usuário pode escolher o avatar e deve colocar o 
 
 Disponível apenas para usuários cadastrados, lobby inicial do quiz
 
-![image](https://github.com/user-attachments/assets/127b8531-95b5-4eeb-a03f-a2225b288efc)
+![image](https://github.com/user-attachments/assets/acf70f43-56af-4856-91b1-2060f837d16f)
 
 Quiz em andamento, onde temos 4 opções de resposta
 
-![image](https://github.com/user-attachments/assets/acf70f43-56af-4856-91b1-2060f837d16f)
+![image](https://github.com/user-attachments/assets/2281131b-c9e3-4886-b91d-bf67d2a82bf9)
 
 Final do Quiz, exibindo a quantidade de acertos e a pontuação final
 
-![image](https://github.com/user-attachments/assets/2281131b-c9e3-4886-b91d-bf67d2a82bf9)
+![image](https://github.com/user-attachments/assets/f7089165-b124-4497-9d10-a8ff78d1cc92)
 
 ---
 
 ### Páginas de Perfil e Editar Conta
 
-![image](https://github.com/user-attachments/assets/f7089165-b124-4497-9d10-a8ff78d1cc92)
+Página do Perfil do Usuário, com todas as informações cadastradas
 
 ![image](https://github.com/user-attachments/assets/c50c395e-1ad3-46a7-8537-1042189b0e92)
 
+Página de Editar Conta, com opção de editar os dados
+
 ![image](https://github.com/user-attachments/assets/2f833e00-896e-4278-b81b-e22ad959733f)
+
+Editando o Email, colocando o email atual e o novo
 
 ![image](https://github.com/user-attachments/assets/421fd6ae-75f5-480b-afde-9a623f9143e7)
 
+Email alterado com sucesso!
+
 ![image](https://github.com/user-attachments/assets/195166b8-1385-4d5c-ab24-632841d083f4)
+
+---
 
 ## Link do github
 
